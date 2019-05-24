@@ -219,7 +219,7 @@ CREATE TABLE #FormetShipSchedules
 		JOIN
 			edi_setups es ON es.parent_destination = RTRIM(fr.ShipToID) AND
 			es.destination = 'TFORM01'
-		ORDER BY fr.customerpart, fr.release_dt
+		ORDER BY customerpart, release_dt
 			
 			
 		UPDATE Frel
@@ -729,5 +729,6 @@ WHERE spid = @@spid
 AND log.message LIKE '%Blanket order does%' OR log.message LIKE '%Duplicate%'
 
 RETURN 0
+
 
 GO

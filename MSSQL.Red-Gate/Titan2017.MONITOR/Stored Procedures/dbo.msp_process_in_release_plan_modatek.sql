@@ -209,7 +209,7 @@ CREATE TABLE #modatekReleases
 		dbo.edi_modatek830_Releases fr
 		JOIN
 			edi_setups es ON es.parent_destination = RTRIM(fr.ShipToID)
-		ORDER BY fr.customerpart, fr.release_dt
+		ORDER BY customerpart, release_dt
 			
 			
 		UPDATE Frel
@@ -698,6 +698,7 @@ SELECT DISTINCT 'Modatek Planning Release', ' 830 Modatek Release Processing Com
  
  
  RETURN 0
+
 
 
 
