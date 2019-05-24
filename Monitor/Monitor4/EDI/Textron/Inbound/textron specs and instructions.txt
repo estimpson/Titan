@@ -1,0 +1,54 @@
+Kautex Delfor Specifications
+Andre S. Boulanger
+Computer Decisions International
+4/24/2001
+
+*** The work performed is for the Avilla, IN plant. The Windsor plant was not online at time work was completed. If the Windsor plant sends their data in the
+***same format as Avilla, this work can be used to translate the Windsor data. If the data is not in the same format as Avilla, more work may be required for 
+***the translation of the Windsor data.
+
+The form used to translate EDI to flat file is TE3_DELFOR_D_Dr96A_Textron Auto^_000912. This was the only form available from Harbinger at the
+time this work was completed.
+
+Mapping of data elements
+
+	BGM02+'/'+1DTM0102 (delivery forcast no. and release date) -----> order_detail.release_number
+	4NAD0201 (ship to id) -----> used to find blanket order
+	1LIN0301 (Kautex part) -----> used to find blanket order
+	1PIA0201 (Kautex PO) -----> used to find blanket order if edi setups check po is turned on
+	1PIA0301 (Kautex ECL) -----> used to compare to ECL in order header. If different an exception will print when release exceptions are requested.
+	2FTX0401+2FTX0402 (Kautex notes) -----> Will print when request for release exceptions are printed
+	2LOC0201 (Kautex dock id) -----> order_header.dock_code
+	1QTY0101 (Quantity type see page 5-25 in implementation guide) ------> 	If 1 then 1QTY0102 = order_detail.qty
+									If 3 then 1QTY0102 = order header fab or raw cum
+									If 48 then 1QTY0102  used in report
+									If 70 then 1QTY0102 used to compare to order_header.our_cum for cum discrepency
+									If 135 then 1QTY0102 = order_detail.qty
+	1SCC01 (Delivery Plan status see page 5-26 in implementation guide) ----->	If 1 then 1QTY0102 is firm release
+									If 2 then 1QTY0102 is order_header.fab_cum
+									If 3 then 1QTY0102 is order_header.raw_cum
+									If 4 then 1QTY0102 is planning release
+									If 5 then 1QTY0102 is past due release
+	4DTM0101(Date type see page 5-28 in implementation guide) ----->		If 2 then 4DTM0102 deliver date - number of transit days -> order_detail.due_date
+									If 10 then 4DTM0102 shipment date -> order_detail.due_date
+									If 50 then 4DTM0102 last received date -> report
+									If 51 cumulative start date-> not mapped
+									If 52 cumulative end date -> then order_header.fab_date or raw_date depending on QTY0102
+									If 194 period start date-> not mapped
+									If 206 period stop date-> not mapped
+								
+								
+Data Setups Required
+
+	edi_setups.parent_destination=edi ship to id for each Textron plant destination
+	edi_setups.id_code_type = thr number of transit days used to calculate a shipment date if 4DTM0101 = 2
+	edi_setups.check_po = 'Y' if you will 1) ship more than one concurrently or 2) you want an exception report when Textron changes their PO number
+	order_header.customer_po = the current po from Textron
+	order_header.engineering_level = the current engineering level from Textron
+	
+Processing Instructions
+
+	Translate 830s as any other trading partner.*** Note: overlay code is RP2 not TE3.***
+	Run textron830 job from executor 
+	
+

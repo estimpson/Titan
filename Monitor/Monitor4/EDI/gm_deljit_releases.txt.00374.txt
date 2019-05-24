@@ -1,0 +1,4 @@
+release_number	ship_to_id	buyer_part	type1	model_year	quantity	date_time	customer_po	process_date
+9933701                            	18024    	15746575                           			00000000001598.00	199912090800		
+9933701                            	18024    	15746575                           			00000000002016.00	199912160800		
+9933701                            	18024    	15746575                           			00000000002520.00	199912300800		

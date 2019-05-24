@@ -1,0 +1,388 @@
+HDREAEGM2DSV      388OUTDESADVD97.A       W Version 4.11
+FILEAEGM2DSV    0   18
+FILEAEGM2DSV    1   18   2C:\STXFW\MAPDATA            DESADV.TXT  S01OUT-DESADV                      2    0    0    1    201                               800  
+FILEAEGM2DSV    2   18   3C:\STXFW\MAPDATA            DESADV.TXT  S02OUT-DESADV                      3    0    0    1    202                               800  
+FILEAEGM2DSV    3   18   4C:\STXFW\MAPDATA            DESADV.TXT  S03OUT-DESADV                      4    0    0    1    203                               800  
+FILEAEGM2DSV    4   18   5C:\STXFW\MAPDATA            DESADV.TXT  S04OUT-DESADV                      5    0    0    1    204                               800  
+FILEAEGM2DSV    5   18   6C:\STXFW\MAPDATA            DESADV.TXT  S05OUT-DESADV                      6    0    0    1    205                               800  
+FILEAEGM2DSV    6   18   7C:\STXFW\MAPDATA            DESADV.TXT  S06OUT-DESADV                      7    0    0    1    206                               800  
+FILEAEGM2DSV    7   18   8C:\STXFW\MAPDATA            DESADV.TXT  S07OUT-DESADV                      8    0    0    1    207                               800  
+FILEAEGM2DSV    8   18   9C:\STXFW\MAPDATA            DESADV.TXT  S08OUT-DESADV                      9    0    0    1    208                               800  
+FILEAEGM2DSV    9   18  10C:\STXFW\MAPDATA            DESADV.TXT  S09OUT-DESADV                     10    0    0    1    209                               800  
+FILEAEGM2DSV   10   18  11C:\STXFW\MAPDATA            DESADV.TXT  S10OUT-DESADV                     11    0    0    1    210                               800  
+FILEAEGM2DSV   11   18  12C:\STXFW\MAPDATA            DESADV.TXT  S11OUT-DESADV                     12    0    0    1    211                               800  
+FILEAEGM2DSV   12   18  13C:\STXFW\MAPDATA            DESADV.TXT  S12OUT-DESADV                     13    0    0    1    212                               800  
+FILEAEGM2DSV   13   18  14C:\STXFW\MAPDATA            DESADV.TXT  S13OUT-DESADV                     14    0    0    1    213                               800  
+FILEAEGM2DSV   14   18  15C:\STXFW\MAPDATA            DESADV.TXT  S14OUT-DESADV                     15    0    0    1    214                               800  
+FILEAEGM2DSV   15   18  16C:\STXFW\MAPDATA            DESADV.TXT  S15OUT-DESADV                     16    0    0    1    215                               800  
+FILEAEGM2DSV   16   18  17C:\STXFW\MAPDATA            DESADV.TXT  S16OUT-DESADV                     17    0    0    1    216                               800  
+FILEAEGM2DSV   17   18  18C:\STXFW\MAPDATA            DESADV.TXT  S17OUT-DESADV                     18    0    0    1    217                               800  
+FILEAEGM2DSV   18   18   1C:\STXFW\MAPDATA            DESADV.TXT  SHEADER-OUT-DESADV                 1   13   12    1    9//STX12//                        800  
+URECAEGM2DSV    0   18
+URECAEGM2DSV    1   18   201OUT-DESADV                     801    6
+URECAEGM2DSV    2   18   302OUT-DESADV                     801    7
+URECAEGM2DSV    3   18   403OUT-DESADV                     801    3
+URECAEGM2DSV    4   18   504OUT-DESADV                     801   14
+URECAEGM2DSV    5   18   605OUT-DESADV                     801    4
+URECAEGM2DSV    6   18   706OUT-DESADV                     801    8
+URECAEGM2DSV    7   18   807OUT-DESADV                     801    3
+URECAEGM2DSV    8   18   908OUT-DESADV                     801    2
+URECAEGM2DSV    9   18  1009OUT-DESADV                     801    3
+URECAEGM2DSV   10   18  1110OUT-DESADV                     801    4
+URECAEGM2DSV   11   18  1211OUT-DESADV                     801    3
+URECAEGM2DSV   12   18  1312OUT-DESADV                     801    4
+URECAEGM2DSV   13   18  1413OUT-DESADV                     801    3
+URECAEGM2DSV   14   18  1514OUT-DESADV                     801    6
+URECAEGM2DSV   15   18  1615OUT-DESADV                     801    6
+URECAEGM2DSV   16   18  1716OUT-DESADV                     801    7
+URECAEGM2DSV   17   18  1817OUT-DESADV                     801    2
+URECAEGM2DSV   18   18   1HEADER-OUT-DESADV                801    7
+BFLDAEGM2DSV    0   92
+BFLDAEGM2DSV    1   92   2   101OUT-DESADV                  RECORD_TYPE                       1    2 20  0      201                               08 0 0
+BFLDAEGM2DSV    2   92   2   201OUT-DESADV                  ASN PURPOSE                       3    1 20  0      0                                 08 0 0
+BFLDAEGM2DSV    3   92   2   301OUT-DESADV                  SHIPMENT ID #                     4   35 20  0      0                                 08 0 0
+BFLDAEGM2DSV    4   92   2   401OUT-DESADV                  ASN DATE/TIME                    39   12 20  0      0                                 08 0 0
+BFLDAEGM2DSV    5   92   2   501OUT-DESADV                  SHIPPED DATE/TIME                51   12 20  0      0                                 08 0 0
+BFLDAEGM2DSV    6   92   2   601OUT-DESADV                  ARRIVAL DATE/TIME:               63   12 20  0      0                                 08 0 0
+BFLDAEGM2DSV    7   92   3   102OUT-DESADV                  RECORD_TYPE                       1    2 20  0      202                               08 0 0
+BFLDAEGM2DSV    8   92   3   202OUT-DESADV                  GROSS WEIGHT                      3   16 51  2 Y    0                                 08 0 0
+BFLDAEGM2DSV    9   92   3   302OUT-DESADV                  UOM1                             19    3 20  0      0                                 08 0 0
+BFLDAEGM2DSV   10   92   3   402OUT-DESADV                  NET WEIGHT                       22   16 51  2 Y    0                                 08 0 0
+BFLDAEGM2DSV   11   92   3   502OUT-DESADV                  UOM2                             38    3 20  0      0                                 08 0 0
+BFLDAEGM2DSV   12   92   3   602OUT-DESADV                  LADING QTY                       41   16 51  2 Y    0                                 08 0 0
+BFLDAEGM2DSV   13   92   3   702OUT-DESADV                  UOM3                             57    3 20  0      0                                 08 0 0
+BFLDAEGM2DSV   14   92   4   103OUT-DESADV                  RECORD_TYPE                       1    2 20  0      203                               08 0 0
+BFLDAEGM2DSV   15   92   4   203OUT-DESADV                  REF # TYPE                        3    3 20  0      0                                 08 0 0
+BFLDAEGM2DSV   16   92   4   303OUT-DESADV                  CARRIER REF #/MASTER BOL #:       6   35 20  0      0                                 08 0 0
+BFLDAEGM2DSV   17   92   5   104OUT-DESADV                  RECORD_TYPE                       1    2 20  0      204                               08 0 0
+BFLDAEGM2DSV   18   92   5   204OUT-DESADV                  ISSUER ID TYPE:                   3    2 20  0      0                                 08 0 0
+BFLDAEGM2DSV   19   92   5   304OUT-DESADV                  MTRL ISSUER ID:                   5    9 20  0      0                                 08 0 0
+BFLDAEGM2DSV   20   92   5   404OUT-DESADV                  COUNTRY:                         14    2 20  0      0                                 08 0 0
+BFLDAEGM2DSV   21   92   5   504OUT-DESADV                  SHIP TO ID TYPE:                 16    2 20  0      0                                 08 0 0
+BFLDAEGM2DSV   22   92   5   604OUT-DESADV                  SHIP TO ID:                      18    9 20  0      0                                 08 0 0
+BFLDAEGM2DSV   23   92   5   704OUT-DESADV                  COUNTRY:_1                       27    2 20  0      0                                 08 0 0
+BFLDAEGM2DSV   24   92   5   804OUT-DESADV                  DOCK CODE:                       29   25 20  0      0                                 08 0 0
+BFLDAEGM2DSV   25   92   5   904OUT-DESADV                  SUPPLIER ID TYPE:                54    2 20  0      0                                 08 0 0
+BFLDAEGM2DSV   26   92   5  1004OUT-DESADV                  SUPPLIER ID:                     56    9 20  0      0                                 08 0 0
+BFLDAEGM2DSV   27   92   5  1104OUT-DESADV                  COUNTRY:_2                       65    2 20  0      0                                 08 0 0
+BFLDAEGM2DSV   28   92   5  1204OUT-DESADV                  SHIP FROM ID TYPE:               67    2 20  0      0                                 08 0 0
+BFLDAEGM2DSV   29   92   5  1304OUT-DESADV                  SHIP FROM ID:                    69    9 20  0      0                                 08 0 0
+BFLDAEGM2DSV   30   92   5  1404OUT-DESADV                  COUNTRY:_3                       78    2 20  0      0                                 08 0 0
+BFLDAEGM2DSV   31   92   6   105OUT-DESADV                  RECORD_TYPE                       1    2 20  0      205                               08 0 0
+BFLDAEGM2DSV   32   92   6   205OUT-DESADV                  ORDERED BY ID TYPE:               3    2 20  0      0                                 08 0 0
+BFLDAEGM2DSV   33   92   6   305OUT-DESADV                  ORDERED BY ID:                    5    9 20  0      0                                 08 0 0
+BFLDAEGM2DSV   34   92   6   405OUT-DESADV                  COUNTRY:                         14    2 20  0      0                                 08 0 0
+BFLDAEGM2DSV   35   92   7   106OUT-DESADV                  RECORD_TYPE                       1    2 20  0      206                               08 0 0
+BFLDAEGM2DSV   36   92   7   206OUT-DESADV                  TRANSPORT STAGE:                  3    2 20  0      0                                 08 0 0
+BFLDAEGM2DSV   37   92   7   306OUT-DESADV                  TRANSPORT MODE:                   5    3 20  0      0                                 08 0 0
+BFLDAEGM2DSV   38   92   7   406OUT-DESADV                  SCAC/AIRBILL #:                   8   17 20  0      0                                 08 0 0
+BFLDAEGM2DSV   39   92   7   506OUT-DESADV                  CODE LIST RESP AGENCY:           25    3 20  0      0                                 08 0 0
+BFLDAEGM2DSV   40   92   7   606OUT-DESADV                  EXCESS TRANS REASON CODE:        28    1 20  0      0                                 08 0 0
+BFLDAEGM2DSV   41   92   7   706OUT-DESADV                  EXCESS TRANSPORT RESP CODE:      29    1 20  0      0                                 08 0 0
+BFLDAEGM2DSV   42   92   7   806OUT-DESADV                  TRANSPORT AUTH #:                30   17 20  0      0                                 08 0 0
+BFLDAEGM2DSV   43   92   8   107OUT-DESADV                  RECORD_TYPE                       1    2 20  0      207                               08 0 0
+BFLDAEGM2DSV   44   92   8   207OUT-DESADV                  EQUIPT TYPE:                      3    2 20  0      0                                 08 0 0
+BFLDAEGM2DSV   45   92   8   307OUT-DESADV                  EQUIPT INITIAL - #:               5   17 20  0      0                                 08 0 0
+BFLDAEGM2DSV   46   92   9   108OUT-DESADV                  RECORD_TYPE                       1    2 20  0      208                               08 0 0
+BFLDAEGM2DSV   47   92   9   208OUT-DESADV                  SEAL #                            3   10 20  0      0                                 08 0 0
+BFLDAEGM2DSV   48   92  10   109OUT-DESADV                  RECORD_TYPE                       1    2 20  0      209                               08 0 0
+BFLDAEGM2DSV   49   92  10   209OUT-DESADV                  # OF PACKAGES                     3   10 51  2 Y    0                                 08 0 0
+BFLDAEGM2DSV   50   92  10   309OUT-DESADV                  PACKAGE TYPE                     13   17 20  0      0                                 08 0 0
+BFLDAEGM2DSV   51   92  11   110OUT-DESADV                  RECORD_TYPE                       1    2 20  0      210                               08 0 0
+BFLDAEGM2DSV   52   92  11   210OUT-DESADV                  PACKAGING INSTRUCTIONS            3    2 20  0      0                                 08 0 0
+BFLDAEGM2DSV   53   92  11   310OUT-DESADV                  REF # TYPE                        5    2 20  0      0                                 08 0 0
+BFLDAEGM2DSV   54   92  11   410OUT-DESADV                  REF #                             7   35 20  0      0                                 08 0 0
+BFLDAEGM2DSV   55   92  12   111OUT-DESADV                  RECORD_TYPE                       1    2 20  0      211                               08 0 0
+BFLDAEGM2DSV   56   92  12   211OUT-DESADV                  PRODUCT ID TYPE                   3    2 20  0 N    0                                 08 0 0
+BFLDAEGM2DSV   57   92  12   311OUT-DESADV                  PRODUCT ID                        5   35 20  0      0                                 08 0 0
+BFLDAEGM2DSV   58   92  13   112OUT-DESADV                  RECORD_TYPE                       1    2 20  0      212                               08 0 0
+BFLDAEGM2DSV   59   92  13   212OUT-DESADV                  LINE ITEM #                       3    8 20  0      0                                 08 0 0
+BFLDAEGM2DSV   60   92  13   312OUT-DESADV                  BUYER ITEM #                     11    8 20  0      0                                 08 0 0
+BFLDAEGM2DSV   61   92  13   412OUT-DESADV                  MODEL YR                         19    4 20  0      0                                 08 0 0
+BFLDAEGM2DSV   62   92  14   113OUT-DESADV                  RECORD_TYPE                       1    2 20  0      213                               08 0 0
+BFLDAEGM2DSV   63   92  14   213OUT-DESADV                  ITEM DESCRIPTION                  3   35 20  0      0                                 08 0 0
+BFLDAEGM2DSV   64   92  14   313OUT-DESADV                  ITEM DESCRIPTION 2               38   35 20  0      0                                 08 0 0
+BFLDAEGM2DSV   65   92  15   114OUT-DESADV                  RECORD_TYPE                       1    2 20  0      214                               08 0 0
+BFLDAEGM2DSV   66   92  15   214OUT-DESADV                  QTY SHIPPED                       3   16 51  2      0                                 08 0 0
+BFLDAEGM2DSV   67   92  15   314OUT-DESADV                  UOM                              19    3 20  0      0                                 08 0 0
+BFLDAEGM2DSV   68   92  15   414OUT-DESADV                  YTD QTY SHIPPED                  22   16 51  2      0                                 08 0 0
+BFLDAEGM2DSV   69   92  15   514OUT-DESADV                  UOM2                             38    3 20  0      0                                 08 0 0
+BFLDAEGM2DSV   70   92  15   614OUT-DESADV                  PO#                              41   35 20  0      0                                 08 0 0
+BFLDAEGM2DSV   71   92  16   115OUT-DESADV                  RECORD_TYPE                       1    2 20  0      215                               08 0 0
+BFLDAEGM2DSV   72   92  16   215OUT-DESADV                  BAR CODE SERIAL #                 3   35 20  0      0                                 08 0 0
+BFLDAEGM2DSV   73   92  16   315OUT-DESADV                  WEIGHT                           38   16 51  2 Y    0                                 08 0 0
+BFLDAEGM2DSV   74   92  16   415OUT-DESADV                  UOM                              54    3 20  0      0                                 08 0 0
+BFLDAEGM2DSV   75   92  16   515OUT-DESADV                  LENGTH                           57   16 51  2 Y    0                                 08 0 0
+BFLDAEGM2DSV   76   92  16   615OUT-DESADV                  UOM2                             73    3 20  0      0                                 08 0 0
+BFLDAEGM2DSV   77   92  17   116OUT-DESADV                  RECORD_TYPE                       1    2 20  0      216                               08 0 0
+BFLDAEGM2DSV   78   92  17   216OUT-DESADV                  THICKNESS:                        3   16 51  2 Y    0                                 08 0 0
+BFLDAEGM2DSV   79   92  17   316OUT-DESADV                  UOM:                             19    3 20  0      0                                 08 0 0
+BFLDAEGM2DSV   80   92  17   416OUT-DESADV                  WIDTH:                           22   16 51  2 Y    0                                 08 0 0
+BFLDAEGM2DSV   81   92  17   516OUT-DESADV                  UOM:_7                           38    3 20  0      0                                 08 0 0
+BFLDAEGM2DSV   82   92  17   616OUT-DESADV                  PRIMARY METALS SHIP QTY:         41   16 51  2 Y    0                                 08 0 0
+BFLDAEGM2DSV   83   92  17   716OUT-DESADV                  UOM:_8                           57    3 20  0      0                                 08 0 0
+BFLDAEGM2DSV   84   92  18   117OUT-DESADV                  RECORD_TYPE                       1    2 20  0      217                               08 0 0
+BFLDAEGM2DSV   85   92  18   217OUT-DESADV                  HEAT CODE                         3   35 20  0      0                                 08 0 0
+BFLDAEGM2DSV   86   92   1   1HEADER-OUT-DESADV             RECORDTYPE                        1    9 20  0      2//STX12//                        08 0 0
+BFLDAEGM2DSV   87   92   1   2HEADER-OUT-DESADV             TRANSID                          10    3 20  0      0                                 08 0 0
+BFLDAEGM2DSV   88   92   1   3HEADER-OUT-DESADV             TRADEPARTNER                     13   12 20  0     32                                 08 0 0
+BFLDAEGM2DSV   89   92   1   4HEADER-OUT-DESADV             DOCNUM                           25   30 20  0      0                                 08 0 0
+BFLDAEGM2DSV   90   92   1   5HEADER-OUT-DESADV             EXTTRANSID                       56   10 20  0      0                                 08 0 0
+BFLDAEGM2DSV   91   92   1   6HEADER-OUT-DESADV             DOCCLASS                         66    6 20  0      0                                 08 0 0
+BFLDAEGM2DSV   92   92   1   7HEADER-OUT-DESADV             OVLCODE                          72    3 20  0     64GM2                              08 0 0
+MEM AEGM2DSV    0   29
+MEM AEGM2DSV    1   29   1CUMLOOKUP                        73 20  0                                   0
+MEM AEGM2DSV    2   29   2CUMMY                             1 20  0                                   0
+MEM AEGM2DSV    3   29   3CUMPART                          30 20  0                                   0
+MEM AEGM2DSV    4   29   4CUMQTY                           10 51  0                                   0
+MEM AEGM2DSV    5   29   5CUMSHIPTO                        30 20  0                                   0
+MEM AEGM2DSV    6   29   6CUMTP                            12 20  0                                   0
+MEM AEGM2DSV    7   29   7CUMWRITE                         83 20  0                                   0
+MEM AEGM2DSV    8   29   8CURRENT-CPS                      12 20  0                                   0
+MEM AEGM2DSV    9   29   9DTM01 1                           3 10  0                                   0
+MEM AEGM2DSV   10   29  10DTM01 3                           3 20  0                                   0
+MEM AEGM2DSV   11   29  11DTM011                            3 20  0                                   0
+MEM AEGM2DSV   12   29  12FTX01                             3 20  0                                   0
+MEM AEGM2DSV   13   29  13GIN01                             3 20  0                                   0
+MEM AEGM2DSV   14   29  14GIR01                             3 20  0                                   0
+MEM AEGM2DSV   15   29  15GIR03 2                           3 20  0                                   0
+MEM AEGM2DSV   16   29  16LIN03 2                           3 20  0                                   0
+MEM AEGM2DSV   17   29  17LOC01                             3 20  0                                   0
+MEM AEGM2DSV   18   29  18MEA01                             3 20  0                                   0
+MEM AEGM2DSV   19   29  19MEA02 1                           2 10  0                                   0
+MEM AEGM2DSV   20   29  20MEA021                            3 20  0                                   0
+MEM AEGM2DSV   21   29  21NAD01                             3 20  0                                   0
+MEM AEGM2DSV   22   29  22PCI01                             2 20  0                                   0
+MEM AEGM2DSV   23   29  23PIA01                             3 20  0                                   0
+MEM AEGM2DSV   24   29  24PIA02 2                           3 20  0                                   0
+MEM AEGM2DSV   25   29  25QTY011                            3 20  0                                   0
+MEM AEGM2DSV   26   29  26RFF011                            3 20  0                                   0
+MEM AEGM2DSV   27   29  27STATUS                            1 20  0                                   0
+MEM AEGM2DSV   28   29  28SYSTEM_DATE                       6 801 0                                   0
+MEM AEGM2DSV   29   29  29SYSTEM_TIME                       4 71  0                                   0
+SEG AEGM2DSV    0   37
+SEG AEGM2DSV    1   37     1UNH  10010                                                               0   000                                                               00                                 0                                   N    1    1
+SEG AEGM2DSV    2   37     3BGM  10010                                                               0   000                                                               00                                 0                                   N    2    2
+SEG AEGM2DSV    3   37     4DTM  1001001OUT-DESADV                  ASN DATE/TIME                    0   000STRVAR                                                         00                                 0                                   N    4    3
+SEG AEGM2DSV    4   37     5DTM  1001001OUT-DESADV                  SHIPPED DATE/TIME                0   000STRVAR                                                         00                                 0                                   N    7    3
+SEG AEGM2DSV    5   37     6DTM  1001001OUT-DESADV                  ARRIVAL DATE/TIME:               0   000STRVAR                                                         00                                 0                                   N   10    3
+SEG AEGM2DSV    6   37     7MEA  1101002OUT-DESADV                  WEIGHT TYPE                      0   000STRVAR                                                         00                                 0                                   N   13    4
+SEG AEGM2DSV    7   37    38MEA  1101002OUT-DESADV                  WEIGHT TYPE                      0   000STRVAR                                                         00                                 0                                   N   17    4
+SEG AEGM2DSV    8   37    37MEA  1101002OUT-DESADV                  WEIGHT TYPE                      0   000STRVAR                                                         00                                 0                                   N   21    4
+SEG AEGM2DSV    9   37     8RFF  12010                                                               0   000                                                               00                                 0                                   N   25    2
+SEG AEGM2DSV   10   37     9NAD  1301004OUT-DESADV                  MTRL ISSUER ID:                  0   000STRVAR                                                         00                                 0                                   N   27    4
+SEG AEGM2DSV   11   37    10NAD  1301004OUT-DESADV                  SHIP TO ID:                      0   000STRVAR                                                         00                                 0                                   N   31    4
+SEG AEGM2DSV   12   37    11LOC  1301004OUT-DESADV                  DOCK CODE:                       0   000STRVAR                                                         00                                 0                                   N   35    2
+SEG AEGM2DSV   13   37    12NAD  1301004OUT-DESADV                  SUPPLIER ID:                     0   000STRVAR                                                         00                                 0                                   N   37    4
+SEG AEGM2DSV   14   37    13NAD  1301004OUT-DESADV                  SHIP FROM ID:                    0   000STRVAR                                                         00                                 0                                   N   41    4
+SEG AEGM2DSV   15   37    14NAD  1401005OUT-DESADV                  ORDERED BY ID:                   0   000STRVAR                                                         00                                 0                                   N   45    4
+SEG AEGM2DSV   16   37    15TDT  15010                                                               0   000                                                               00                                 0                                   N   49    7
+SEG AEGM2DSV   17   37    16EQD  16010                                                               0   000                                                               00                                 0                                   N   56    2
+SEG AEGM2DSV   18   37    17SEL  17010                                                               0   000                                                               00                                 0                                   N   58    1
+SEG AEGM2DSV   19   37    18CPS  18010                                                               0   000                                                               00                                 0                                   N   59    2
+SEG AEGM2DSV   20   37    19PAC  18010                                                               0   000                                                               00                                 0                                   N   61    2
+SEG AEGM2DSV   21   37    20PCI  19010                                                               0   000                                                               00                                 0                                   N   63    1
+SEG AEGM2DSV   22   37    21RFF  19010                                                               0   000                                                               00                                 0                                   N   64    2
+SEG AEGM2DSV   23   37    22GIR  2001010OUT-DESADV                  PRODUCT ID                       0   000STRVAR                                                         00                                 0                                   N   66    4
+SEG AEGM2DSV   24   37    23LIN  21010                                                               0   000                                                               00                                 0                                   N   70    3
+SEG AEGM2DSV   25   37    24PIA  2101011OUT-DESADV                  MODEL YR                         0   000STRVAR                                                         00                                 0                                   N   73    3
+SEG AEGM2DSV   26   37    25IMD  22010                                                               0   000                                                               00                                 0                                   N   76    2
+SEG AEGM2DSV   27   37    26QTY  2301013OUT-DESADV                  QTY SHIPPED                      0   000STRVAR                                                         00                                 0                                   N   78    3
+SEG AEGM2DSV   28   37    27QTY  2301013OUT-DESADV                  CYTD QTY SHIPPED                 0   000STRVAR                                                         00                                 0                                   N   81    3
+SEG AEGM2DSV   29   37    29RFF  2301015OUT-DESADV                  PO #:                            0   000STRVAR                                                         00                                 0                                   N   84    2
+SEG AEGM2DSV   30   37    30PCI  2401016OUT-DESADV                  BAR CODE SERIAL #                0   000STRVAR                                                         00                                 0                                   N   86    2
+SEG AEGM2DSV   31   37    31MEA  2401016OUT-DESADV                  UOM:                             0   000STRVAR                                                         00                                 0                                   N   88    4
+SEG AEGM2DSV   32   37    32MEA  2401016OUT-DESADV                  UOM:_6                           0   000STRVAR                                                         00                                 0                                   N   92    4
+SEG AEGM2DSV   33   37    33MEA  2501017OUT-DESADV                  UOM:                             0   000STRVAR                                                         00                                 0                                   N   96    4
+SEG AEGM2DSV   34   37    34MEA  2501017OUT-DESADV                  UOM:_7                           0   000STRVAR                                                         00                                 0                                   N  100    4
+SEG AEGM2DSV   35   37    35QTY  2501017OUT-DESADV                  PRIMARY METALS SHIP QTY:         0   000STRVAR                                                         00                                 0                                   N  104    3
+SEG AEGM2DSV   36   37    36GIN  2601018OUT-DESADV                  HEAT CODE                        0   000STRVAR                                                         00                                 0                                   N  107    2
+SEG AEGM2DSV   37   37     2UNT  28000                                                               0   000                                                               00                                 0                                   N  109    0
+DET AEGM2DSV    0  108
+DET AEGM2DSV    1  108     1UNH0201     2  10065     0 1  6 10 31 1HEADER-OUT-DESADV             DOCNUM                           4 30 1   25 00Y          0  0    0 000                                       0   0  
+DET AEGM2DSV    2  108     3BGM02      14  1001004   0 1 35 10 31 201OUT-DESADV                  SHIPMENT ID #                    3 35 1    4 00           0  0    0 000                                       0   0  
+DET AEGM2DSV    3  108     3BGM03      13  1001225   0 1  1 10 31 201OUT-DESADV                  ASN PURPOSE                      2  1 1    3 00           0  0    0 000                                       0   0  
+DET AEGM2DSV    4  108     4DTM01 1    15  100C507   0 1  3 10 10 0STRVAR                        137                              0  3 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV    5  108     4DTM01 2    16  100C507   012 12 10 31 201OUT-DESADV                  ASN DATE/TIME                    4 12 1   39 00           0  0    0 000                                       1   1  
+DET AEGM2DSV    6  108     4DTM01 3    17  100C507   0 1  3 10 40 0CNDVAR                        DTM01 3                         10  3 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV    7  108     5DTM01 1    18  100C507   0 1  3 10 10 0STRVAR                        11                               0  3 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV    8  108     5DTM01 2    19  100C507   012 12 10 31 201OUT-DESADV                  SHIPPED DATE/TIME                5 12 1   51 00           0  0    0 000                                       2   1  
+DET AEGM2DSV    9  108     5DTM01 3    20  100C507   0 1  3 10 40 0CNDVAR                        DTM01 3                         10  3 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   10  108     6DTM01 1    21  100C507   0 1  3 10 40 0CNDVAR                        DTM01 1                          9  3 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   11  108     6DTM01 2    22  100C507   012 12 10 31 201OUT-DESADV                  ARRIVAL DATE/TIME:               6 12 1   63 00           0  0    0 000                                       3   1  
+DET AEGM2DSV   12  108     6DTM01 3    23  100C507   0 1  3 10 40 0CNDVAR                        DTM01 3                         10  3 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   13  108     7MEA01     116  1106311   0 1  3 10 10 0STRVAR                        AAX                              0  3 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   14  108     7MEA02 1    25  110C502   0 1  2 10 40 0CNDVAR                        MEA02 1                         19  2 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   15  108     7MEA03 1    27  110C174   0 1  3 10 31 302OUT-DESADV                  UOM1                             3  3 1   19 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   16  108     7MEA03 2    26  110C174   0 1 14 50 34 302OUT-DESADV                  GROSS WEIGHT                     2 16 5    3 20  Y        0  0    0 000                                       4   1  
+DET AEGM2DSV   17  108    38MEA01     121  1106311   0 1  3 10 10 0STRVAR                        AAX                              0  3 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   18  108    38MEA02 1   122  110C502   0 1  2 10 40 0CNDVAR                        MEA02 1                         19  2 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   19  108    38MEA03 1   123  110C174   0 1  3 10 31 302OUT-DESADV                  UOM2                             5  3 1   38 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   20  108    38MEA03 2   124  110C174   0 1 14 50 34 302OUT-DESADV                  NET WEIGHT                       4 16 5   22 20  Y        0  0    0 000                                       5   1  
+DET AEGM2DSV   21  108    37MEA01     117  1106311   0 1  3 10 10 0STRVAR                        AAX                              0  3 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   22  108    37MEA02 1   118  110C502   0 1  2 10 40 0CNDVAR                        MEA02 1                         19  2 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   23  108    37MEA03 1   119  110C174   0 1  3 10 31 302OUT-DESADV                  UOM3                             7  3 1   57 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   24  108    37MEA03 2   120  110C174   0 1 14 50 34 302OUT-DESADV                  LADING QTY                       6 16 5   41 20  Y        0  0    0 000                                       6   1  
+DET AEGM2DSV   25  108     8RFF01 1    28  120C506   0 2  2 10 31 403OUT-DESADV                  REF # TYPE                       2  3 1    3 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   26  108     8RFF01 2    29  120C506   0 1 35 10 31 403OUT-DESADV                  CARRIER REF #/MASTER BOL #:      3 35 1    6 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   27  108     9NAD01      30  1303035   0 1  3 10 10 0STRVAR                        MI                               0  3 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   28  108     9NAD02 1    32  130C082   0 3  9 10 31 504OUT-DESADV                  MTRL ISSUER ID:                  3  9 1    5 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   29  108     9NAD02 3    31  130C082   0 2  2 10 31 504OUT-DESADV                  ISSUER ID TYPE:                  2  2 1    3 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   30  108     9NAD09      33  1303207   0 2  2 10 31 504OUT-DESADV                  COUNTRY:                         4  2 1   14 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   31  108    10NAD01      34  1303035   0 1  3 10 10 0STRVAR                        ST                               0  3 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   32  108    10NAD02 1    36  130C082   0 3  9 10 31 504OUT-DESADV                  SHIP TO ID:                      6  9 1   18 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   33  108    10NAD02 3    35  130C082   0 2  2 10 31 504OUT-DESADV                  SHIP TO ID TYPE:                 5  2 1   16 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   34  108    10NAD09      37  1303207   0 2  2 10 31 504OUT-DESADV                  COUNTRY:_1                       7  2 1   27 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   35  108    11LOC01      38  1303227   0 1  3 10 10 0STRVAR                        11                               0  3 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   36  108    11LOC02 1    39  130C517   0 1 25 10 31 504OUT-DESADV                  DOCK CODE:                       8 25 1   29 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   37  108    12NAD01      40  1303035   0 1  3 10 10 0STRVAR                        SU                               0  3 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   38  108    12NAD02 1    42  130C082   0 3  9 10 31 504OUT-DESADV                  SUPPLIER ID:                    10  9 1   56 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   39  108    12NAD02 3    41  130C082   0 2  2 10 31 504OUT-DESADV                  SUPPLIER ID TYPE:                9  2 1   54 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   40  108    12NAD09      43  1303207   0 2  2 10 31 504OUT-DESADV                  COUNTRY:_2                      11  2 1   65 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   41  108    13NAD01      44  1303035   0 1  3 10 40 0CNDVAR                        NAD01                           21  3 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   42  108    13NAD02 1    46  130C082   0 3  9 10 31 504OUT-DESADV                  SHIP FROM ID:                   13  9 1   69 00           0  0    0 000                                       7   1  
+DET AEGM2DSV   43  108    13NAD02 3    45  130C082   0 2  2 10 31 504OUT-DESADV                  SHIP FROM ID TYPE:              12  2 1   67 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   44  108    13NAD09      47  1303207   0 2  2 10 31 504OUT-DESADV                  COUNTRY:_3                      14  2 1   78 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   45  108    14NAD01      48  1403035   0 1  3 10 10 0STRVAR                        OB                               0  3 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   46  108    14NAD02 1    50  140C082   0 3  9 10 31 605OUT-DESADV                  ORDERED BY ID:                   3  9 1    5 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   47  108    14NAD02 3    49  140C082   0 2  2 10 31 605OUT-DESADV                  ORDERED BY ID TYPE:              2  2 1    3 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   48  108    14NAD09      51  1403207   0 2  2 10 31 605OUT-DESADV                  COUNTRY:                         4  2 1   14 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   49  108    15TDT01      52  1508051   0 2  2 10 31 706OUT-DESADV                  TRANSPORT STAGE:                 2  2 1    3 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   50  108    15TDT03 1    53  150C220   0 1  3 10 31 706OUT-DESADV                  TRANSPORT MODE:                  3  3 1    5 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   51  108    15TDT05 1    54  150C040   0 1 17 10 31 706OUT-DESADV                  SCAC/AIRBILL #:                  4 17 1    8 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   52  108    15TDT05 3    55  150C040   0 2  3 10 31 706OUT-DESADV                  CODE LIST RESP AGENCY:           5  3 1   25 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   53  108    15TDT07 1    56  150C401   0 1  1 10 31 706OUT-DESADV                  EXCESS TRANS REASON CODE:        6  1 1   28 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   54  108    15TDT07 2    57  150C401   0 1  1 10 31 706OUT-DESADV                  EXCESS TRANSPORT RESP CODE:      7  1 1   29 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   55  108    15TDT07 3    58  150C401   0 1 17 10 31 706OUT-DESADV                  TRANSPORT AUTH #:                8 17 1   30 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   56  108    16EQD01      59  1608053   0 2  2 10 31 807OUT-DESADV                  EQUIPT TYPE:                     2  2 1    3 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   57  108    16EQD02 1    60  160C237   0 1 17 10 31 807OUT-DESADV                  EQUIPT INITIAL - #:              3 17 1    5 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   58  108    17SEL01      61  1709308   0 1 10 10 31 908OUT-DESADV                  SEAL #                           2 10 1    3 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   59  108    18CPS01      62  1807164   0 1 12 10 21 0MEMVAR                        CURRENT-CPS                      8 12 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   60  108    18CPS03      63  1807075   0 1  1 10 10 0STRVAR                        4                                0  1 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   61  108    19PAC01      64  1807224   0 1  8 50 341009OUT-DESADV                  # OF PACKAGES                    2 10 5    3 20           0  0    0 000                                       0   0  
+DET AEGM2DSV   62  108    19PAC03 1    65  180C202   0 1 17 10 311009OUT-DESADV                  PACKAGE TYPE                     3 17 1   13 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   63  108    20PCI01      66  1904233   0 2  2 10 311110OUT-DESADV                  PACKAGING INSTRUCTIONS           2  2 1    3 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   64  108    21RFF01 1    67  190C506   0 2  2 10 311110OUT-DESADV                  REF # TYPE                       3  2 1    5 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   65  108    21RFF01 2    68  190C506   0 1 35 10 311110OUT-DESADV                  REF #                            4 35 1    7 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   66  108    22GIR01      69  2007297   0 1  3 10 10 0STRVAR                        3                                0  3 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   67  108    22GIR02 1    70  200C206   0 1 35 10 311211OUT-DESADV                  PRODUCT ID                       3 35 1    5 00           0  0    0 000                                       8   1  
+DET AEGM2DSV   68  108    22GIR02 2    71  200C206   0 2  2 10 311211OUT-DESADV                  PRODUCT ID TYPE                  2  2 1    3 00  N        0  0    0 000                                       9   1  
+DET AEGM2DSV   69  108    22GIR03 2    73  200C206   0 1  3 10 40 0CNDVAR                        GIR03 2                         15  3 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   70  108    23LIN01      74  2101082   0 1  6 50 311312OUT-DESADV                  LINE ITEM #                      2  8 1    3 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   71  108    23LIN03 1    75  210C212   0 1  8 10 311312OUT-DESADV                  BUYER ITEM #                     3  8 1   11 00           0  0    0 000                                      10   1  
+DET AEGM2DSV   72  108    23LIN03 2    76  210C212   0 1  3 10 40 0CNDVAR                        LIN03 2                         16  3 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   73  108    24PIA01      77  2104347   0 1  3 10 10 0STRVAR                        1                                0  3 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   74  108    24PIA02 1    78  210C212   0 1  4 10 311312OUT-DESADV                  MODEL YR                         4  4 1   19 00           0  0    0 000                                      11   1  
+DET AEGM2DSV   75  108    24PIA02 2    79  210C212   0 1  3 10 40 0CNDVAR                        PIA02 2                         24  3 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   76  108    25IMD03 4    80  220C273   0 1 35 10 311413OUT-DESADV                  ITEM DESCRIPTION                 2 35 1    3 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   77  108    25IMD03 5    81  220C273   0 1 35 10 311413OUT-DESADV                  ITEM DESCRIPTION 2               3 35 1   38 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   78  108    26QTY01 1    82  230C186   0 1  3 10 10 0STRVAR                        12                               0  3 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   79  108    26QTY01 2    83  230C186   0 1 14 50 341514OUT-DESADV                  QTY SHIPPED                      2 16 5    3 20           0  0    0 000                                       0   0  
+DET AEGM2DSV   80  108    26QTY01 3    84  230C186   0 1  3 10 311514OUT-DESADV                  UOM                              3  3 1   19 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   81  108    27QTY01 1    85  230C186   0 1  3 10 10 0STRVAR                        3                                0  3 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   82  108    27QTY01 2    86  230C186   0 1 14 50 341514OUT-DESADV                  YTD QTY SHIPPED                  4 16 5   22 20 YY        0  0    0 000                                       0   0  
+DET AEGM2DSV   83  108    27QTY01 3    87  230C186   0 1  3 10 311514OUT-DESADV                  UOM2                             5  3 1   38 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   84  108    29RFF01 1    90  230C506   0 1  3 10 10 0STRVAR                        ON                               0  3 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   85  108    29RFF01 2    91  230C506   0 1 35 10 311514OUT-DESADV                  PO#                              6 35 1   41 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   86  108    30PCI01      92  2404233   0 2  2 10 10 0STRVAR                        15                               0  2 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   87  108    30PCI02 1    93  240C210   0 1 35 10 311615OUT-DESADV                  BAR CODE SERIAL #                2 35 1    3 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   88  108    31MEA01      94  2406311   0 1  3 10 10 0STRVAR                        PD                               0  2 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   89  108    31MEA02 1    95  240C502   0 1  3 10 40 0CNDVAR                        MEA021                          20  3 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   90  108    31MEA03 1    97  240C174   0 1  3 10 311615OUT-DESADV                  UOM                              4  3 1   54 00           0  0    0 000                                      12   1  
+DET AEGM2DSV   91  108    31MEA03 2    96  240C174   0 1 14 50 341615OUT-DESADV                  WEIGHT                           3 16 5   38 20  Y        0  0    0 000                                      13   1  
+DET AEGM2DSV   92  108    32MEA01      98  2406311   0 1  3 10 10 0STRVAR                        PD                               0  2 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   93  108    32MEA02 1    99  240C502   0 1  3 10 40 0CNDVAR                        MEA021                          20  3 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   94  108    32MEA03 1   101  240C174   0 1  3 10 311615OUT-DESADV                  UOM2                             6  3 1   73 00           0  0    0 000                                      14   1  
+DET AEGM2DSV   95  108    32MEA03 2   100  240C174   0 1 14 50 341615OUT-DESADV                  LENGTH                           5 16 5   57 20  Y        0  0    0 000                                      15   1  
+DET AEGM2DSV   96  108    33MEA01     102  2506311   0 1  3 10 10 0STRVAR                        PD                               0  2 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   97  108    33MEA02 1   103  250C502   0 1  3 10 40 0CNDVAR                        MEA021                          20  3 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV   98  108    33MEA03 1   105  250C174   0 1  3 10 311716OUT-DESADV                  UOM:                             3  3 1   19 00           0  0    0 000                                      16   1  
+DET AEGM2DSV   99  108    33MEA03 2   104  250C174   0 1 14 50 341716OUT-DESADV                  THICKNESS:                       2 16 5    3 20  Y        0  0    0 000                                      17   1  
+DET AEGM2DSV  100  108    34MEA01     106  2506311   0 1  3 10 10 0STRVAR                        PD                               0  2 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV  101  108    34MEA02 1   107  250C502   0 1  3 10 40 0CNDVAR                        MEA021                          20  3 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV  102  108    34MEA03 1   109  250C174   0 1  3 10 311716OUT-DESADV                  UOM:_7                           5  3 1   38 00           0  0    0 000                                      18   1  
+DET AEGM2DSV  103  108    34MEA03 2   108  250C174   0 1 14 50 341716OUT-DESADV                  WIDTH:                           4 16 5   22 20  Y        0  0    0 000                                      19   1  
+DET AEGM2DSV  104  108    35QTY01 1   110  250C186   0 1  3 10 10 0STRVAR                        12                               0  3 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV  105  108    35QTY01 2   111  250C186   0 1 14 50 341716OUT-DESADV                  PRIMARY METALS SHIP QTY:         6 16 5   41 20  Y        0  0    0 000                                       0   0  
+DET AEGM2DSV  106  108    35QTY01 3   112  250C186   0 1  3 10 311716OUT-DESADV                  UOM:_8                           7  3 1   57 00           0  0    0 000                                       0   0  
+DET AEGM2DSV  107  108    36GIN01     113  2607405   0 1  3 10 10 0STRVAR                        BX                               0  3 1    0 00           0  0    0 000                                       0   0  
+DET AEGM2DSV  108  108    36GIN02 1   114  260C208   0 1 35 10 311817OUT-DESADV                  HEAT CODE                        2 35 1    3 00           0  0    0 000                                       0   0  
+CND AEGM2DSV    0   19
+CND AEGM2DSV    1   19     4DTM01      16  100C50712 12 1 31 201OUT-DESADV                  ASN DATE/TIME                    4 12 1   39 00           0  0    0 000                                   2   0  1003   0   0203                           0   0   000   0   0                              48
+CND AEGM2DSV    2   19     5DTM01      19  100C50712 12 1 31 201OUT-DESADV                  SHIPPED DATE/TIME                5 12 1   51 00           0  0    0 000                                   2   0  1003   0   0203                           0   0   000   0   0                              48
+CND AEGM2DSV    3   19     6DTM01      22  100C50712 12 1 31 201OUT-DESADV                  ARRIVAL DATE/TIME:               6 12 1   63 00           0  0    0 000                                   2   0  1003   0   0203                           2   0   903   0   0132                           48
+CND AEGM2DSV    4   19     7MEA03      26  110C174 1 14 5 34 302OUT-DESADV                  GROSS WEIGHT                     2 16 5    3 20  Y        0  0    0 000                                   2   0  1903   0   0G                             0   0   000   0   0                              48
+CND AEGM2DSV    5   19    38MEA03     124  110C174 1 14 5 34 302OUT-DESADV                  NET WEIGHT                       4 16 5   22 20  Y        0  0    0 000                                   2   0  1903   0   0N                             0   0   000   0   0                              48
+CND AEGM2DSV    6   19    37MEA03     120  110C174 1 14 5 34 302OUT-DESADV                  LADING QTY                       6 16 5   41 20  Y        0  0    0 000                                   2   0  1903   0   0SQ                            0   0   000   0   0                              48
+CND AEGM2DSV    7   19    13NAD02      46  130C082 3  9 1 31 504OUT-DESADV                  SHIP FROM ID:                   13  9 1   69 00           0  0    0 000                                   2   0  2103   0   0SF                            0   0   000   0   0                              48
+CND AEGM2DSV    8   19    22GIR02      70  200C206 1 35 1 311211OUT-DESADV                  PRODUCT ID                       3 35 1    5 00           0  0    0 000                                   2   0  1503   0   0AL                            0   0   000   0   0                              48
+CND AEGM2DSV    9   19    22GIR02      71  200C206 2  2 1 311211OUT-DESADV                  PRODUCT ID TYPE                  2  2 1    3 00  N        0  0    0 000                                   2   0  1503   0   0AL                            0   0   000   0   0                              48
+CND AEGM2DSV   10   19    23LIN03      75  210C212 1  8 1 311312OUT-DESADV                  BUYER ITEM #                     3  8 1   11 00           0  0    0 000                                   2   0  1603   0   0IN                            0   0   000   0   0                              48
+CND AEGM2DSV   11   19    24PIA02      78  210C212 1  4 1 311312OUT-DESADV                  MODEL YR                         4  4 1   19 00           0  0    0 000                                   2   0  2403   0   0RY                            0   0   000   0   0                              48
+CND AEGM2DSV   12   19    31MEA03      97  240C174 1  3 1 311615OUT-DESADV                  UOM                              4  3 1   54 00           0  0    0 000                                   2   0  2003   0   0WT                            0   0   000   0   0                              48
+CND AEGM2DSV   13   19    31MEA03      96  240C174 1 14 5 341615OUT-DESADV                  WEIGHT                           3 16 5   38 20  Y        0  0    0 000                                   2   0  2003   0   0WT                            0   0   000   0   0                              48
+CND AEGM2DSV   14   19    32MEA03     101  240C174 1  3 1 311615OUT-DESADV                  UOM2                             6  3 1   73 00           0  0    0 000                                   2   0  2003   0   0LN                            0   0   000   0   0                              48
+CND AEGM2DSV   15   19    32MEA03     100  240C174 1 14 5 341615OUT-DESADV                  LENGTH                           5 16 5   57 20  Y        0  0    0 000                                   2   0  2003   0   0LN                            0   0   000   0   0                              48
+CND AEGM2DSV   16   19    33MEA03     105  250C174 1  3 1 311716OUT-DESADV                  UOM:                             3  3 1   19 00           0  0    0 000                                   2   0  2003   0   0TH                            0   0   000   0   0                              48
+CND AEGM2DSV   17   19    33MEA03     104  250C174 1 14 5 341716OUT-DESADV                  THICKNESS:                       2 16 5    3 20  Y        0  0    0 000                                   2   0  2003   0   0TH                            0   0   000   0   0                              48
+CND AEGM2DSV   18   19    34MEA03     109  250C174 1  3 1 311716OUT-DESADV                  UOM:_7                           5  3 1   38 00           0  0    0 000                                   2   0  2003   0   0WD                            0   0   000   0   0                              48
+CND AEGM2DSV   19   19    34MEA03     108  250C174 1 14 5 341716OUT-DESADV                  WIDTH:                           4 16 5   22 20  Y        0  0    0 000                                   2   0  2003   0   0WD                            0   0   000   0   0                              48
+OUT AEGM2DSV    0   18
+OUT AEGM2DSV    1   18  100HEADER-OUT-DESADV                1M                                 0NN                                   0                                 0                                 0 15    2 2  0    1 1 20    4 30  1100  100 
+OUT AEGM2DSV    2   18  11002OUT-DESADV                     3 HEADER-OUT-DESADV                1NN                                   0                                 0                                 0  0    1 1  0    1 1 30    7 20  1200  100 
+OUT AEGM2DSV    3   18  12003OUT-DESADV                     4 HEADER-OUT-DESADV                1YN                                   0                                 0                                 0  0    1 1  0    1 1 40    9 20  1200  130 
+OUT AEGM2DSV    4   18  13004OUT-DESADV                     5 HEADER-OUT-DESADV                1NN                                   0                                 0                                 0  0    1 1  0    1 1 50   11 20  1400  100 
+OUT AEGM2DSV    5   18  14005OUT-DESADV                     6 HEADER-OUT-DESADV                1NY                                   0                                 0                                 0  0    1 1  0    1 1 60   13 20  1500  150 
+OUT AEGM2DSV    6   18  15006OUT-DESADV                     7 HEADER-OUT-DESADV                1YN                                   0                                 0                                 0  0    1 1  0    1 1 70   15 20  1500  160 
+OUT AEGM2DSV    7   18  16007OUT-DESADV                     8 HEADER-OUT-DESADV                1YN                                   0                                 0                                 0  0    1 1  0    1 1 80   17 20  1600  170 
+OUT AEGM2DSV    8   18  17008OUT-DESADV                     9 HEADER-OUT-DESADV                1YY                                   0                                 0                                 0  0    1 1  0    1 1 90   19 20  1700  180 
+OUT AEGM2DSV    9   18  18009OUT-DESADV                    10 HEADER-OUT-DESADV                1YN                                   0                                 0                                 0  0    1 1  0    1 1100   21 20  1900  100 
+OUT AEGM2DSV   10   18  19010OUT-DESADV                    11 09OUT-DESADV                    10NY                                   0                                 0                                 0  0    1 1  0    1 1110   23 20  2000  200 
+OUT AEGM2DSV   11   18  20011OUT-DESADV                    12 09OUT-DESADV                    10YY                                   0                                 0                                 0  0    1 1  0    1 1120   25 20  2000  210 
+OUT AEGM2DSV   12   18  21012OUT-DESADV                    13 09OUT-DESADV                    10NN                                   0                                 0                                 0  0    1 1  0    1 1130   27 20  2200  180 
+OUT AEGM2DSV   13   18  22013OUT-DESADV                    14 09OUT-DESADV                    10YY                                   0                                 0                                 0  0    1 1  0    1 1140   29 20  2200  230 
+OUT AEGM2DSV   14   18  23014OUT-DESADV                    15 09OUT-DESADV                    10NN                                   0                                 0                                 0  0    1 1  0    1 1150   31 20  2400  180 
+OUT AEGM2DSV   15   18  24015OUT-DESADV                    16 09OUT-DESADV                    10YY                                   0                                 0                                 0  0    1 1  0    1 1160   33 20  2500  180 
+OUT AEGM2DSV   16   18  25016OUT-DESADV                    17 15OUT-DESADV                    16NY                                   0                                 0                                 0  0    1 1  0    1 1170   35 20  2600  260 
+OUT AEGM2DSV   17   18  26017OUT-DESADV                    18 15OUT-DESADV                    16YY                                   0                                 0                                 0  0    1 1  0    1 1180   37 20  2600  240 
+OUT AEGM2DSV   18   18  280                                 0 HEADER-OUT-DESADV                1  Y                                  0                                 0                                 0  0    1 1  0    1 1  0    1 10  1000  100 
+RULEAEGM2DSV    0   38
+RULEAEGM2DSV    1   38    0    1 1    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0                                                                                
+RULEAEGM2DSV    2   38   15    122   28    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0                                                                                
+RULEAEGM2DSV    3   38   15    222   29    0    1    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0                                                                                
+RULEAEGM2DSV    4   38   20    1 3    1    1    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0                                                                                
+RULEAEGM2DSV    5   38   20    2 6    2    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0                                                                                
+RULEAEGM2DSV    6   38   20    3 3    2    2    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0                                                                                
+RULEAEGM2DSV    7   38   30    1 6    3    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0                                                                                
+RULEAEGM2DSV    8   38   30    2 3    3    3    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0                                                                                
+RULEAEGM2DSV    9   38   40    1 6    4    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0                                                                                
+RULEAEGM2DSV   10   38   40    2 3    4    4    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0                                                                                
+RULEAEGM2DSV   11   38   50    1 6    5    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0                                                                                
+RULEAEGM2DSV   12   38   50    2 3    5    5    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0                                                                                
+RULEAEGM2DSV   13   38   60    1 6    6    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0                                                                                
+RULEAEGM2DSV   14   38   60    2 3    6    6    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0                                                                                
+RULEAEGM2DSV   15   38   70    1 6    7    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0                                                                                
+RULEAEGM2DSV   16   38   70    2 3    7    7    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0                                                                                
+RULEAEGM2DSV   17   38   80    1 6    8    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0                                                                                
+RULEAEGM2DSV   18   38   80    2 3    8    8    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0                                                                                
+RULEAEGM2DSV   19   38   90    1 6    9    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0                                                                                
+RULEAEGM2DSV   20   38   90    2 3    9    9    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0                                                                                
+RULEAEGM2DSV   21   38  100    1 6   10    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0                                                                                
+RULEAEGM2DSV   22   38  100    2 3   10   10    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0                                                                                
+RULEAEGM2DSV   23   38  110    1 6   11    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0                                                                                
+RULEAEGM2DSV   24   38  110    2 3   11   11    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0                                                                                
+RULEAEGM2DSV   25   38  120    1 6   12    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0                                                                                
+RULEAEGM2DSV   26   38  120    2 3   12   12    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0                                                                                
+RULEAEGM2DSV   27   38  130    1 6   13    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0                                                                                
+RULEAEGM2DSV   28   38  130    2 3   13   13    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0                                                                                
+RULEAEGM2DSV   29   38  140    1 6   14    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0                                                                                
+RULEAEGM2DSV   30   38  140    2 3   14   14    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0                                                                                
+RULEAEGM2DSV   31   38  150    1 6   15    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0                                                                                
+RULEAEGM2DSV   32   38  150    2 3   15   15    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0                                                                                
+RULEAEGM2DSV   33   38  160    1 6   16    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0                                                                                
+RULEAEGM2DSV   34   38  160    2 3   16   16    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0                                                                                
+RULEAEGM2DSV   35   38  170    1 6   17    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0                                                                                
+RULEAEGM2DSV   36   38  170    2 3   17   17    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0                                                                                
+RULEAEGM2DSV   37   38  180    1 6   18    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0                                                                                
+RULEAEGM2DSV   38   38  180    2 3   18   18    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0                                                                                
+END 

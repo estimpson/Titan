@@ -1,0 +1,37 @@
+BGM
+DTM doc
+DTM Despatch
+DTM Delivery
+MEA Gross
+MEA Net
+MEA Lading Qty
+RFF Carrier Ref
+NAD Buyer
+NAD Supplier
+NAD Ship To
+TDT Transport (departure)
+EQD
+CPS Group (Pallet)
+	CPS
+	Package protection group
+		PAC
+	PAC Packaging
+	PCI
+	GIN
+	CPS Group (Carton)
+		CPS
+		Package protection group
+			PAC
+		PAC Packaging
+		QTY
+		PCI
+		ID Group
+			GIN
+		LIN
+		PIA
+		QTY
+		ALI
+		FTX
+		RFF
+		LOC
+		

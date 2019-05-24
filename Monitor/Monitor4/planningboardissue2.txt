@@ -1,0 +1,2 @@
+ErrorMessage	Line	Window	Object	EventName	Employee	Module	Explanation
+Bad runtime function reference	10	w_job_properties	tab_properties	selectionchanged			

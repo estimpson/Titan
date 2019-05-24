@@ -328,3 +328,26 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+*.zip
+*.iso
+DB/MonitorFullBkup.2019-03-28.bk
+Monitor/Monitor4.6 Build 20041231/
+*.pbd*
+*.exe*
+*.lnk
+*.pbl*
+*.080
+*.pbt
+*.MRG
+*.bkp*
+*.old*
+*.BAK*
+*.ocx
+*.ico
+*.dll
+*.dat
+*.jar
+*.cab
+*.db
+*.isu
+*.rar

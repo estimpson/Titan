@@ -1,0 +1,53 @@
+:Base MonAppHelp.hlp
+:Title The MONITOR Factor Management System
+1 Welcome
+2 Welcome=Welcome
+1 The MONITOR Factory Management System
+2 The Monitor
+3 The Monitor=The_Monitor
+3 Inventory
+4 Inventory=Inventory
+3 Order Entry
+4 Order Entry=Order_Entry
+3 Purchasing
+4 Purchasing=Purchasing
+3 Production Scheduling
+4 Production Scheduling=Production_Scheduling
+3 Setups
+4 Setups=Setups
+4 Small_Setups=Small_Setups
+4 CUSTOMERS_Setups=CUSTOMERS_Setups
+4 PARTS_Setups=PARTS_Setups
+4 VENDORS_Setups=VENDORS_Setups
+4 PARMS_Setups=PARMS_Setups
+4 LOCATIONS_Setups=LOCATIONS_Setups
+4 USER_DEFINED_Setups=USER_DEFINED_Setups
+4 PRICING_Setups=PRICING_Setups
+2 Inventory Control
+3 Inventory Control=Inventory_Control
+3 Views in Inventory Control=Views_in_Inventory_Control
+3 Job Complete=Job_Complete
+3 Material Issue=Material_Issue
+3 Break Out=Break_Out
+3 Transfer=Transfer
+3 Combine=Combine
+3 Quality=Quality
+3 Combo Scan=Combo_Scan
+2 Pack Line
+3 Pack Line=Pack_Line
+2 Product Costing
+3 Product Costing=Product_Costing
+2 Shipping Dock
+3 Shipping Dock=Shipping_Dock
+2 Receiving Dock
+3 Receiving Dock=Receiving_Dock
+2 Shop Floor
+3 Shop Floor=Shop_Floor
+2 The Monitor Utilities
+3 The Monitor Utilities=The_Monitor_Utilities
+2 Super Cop
+3 Super Cop=Super_Cop
+2 Monitor Production Data Collection
+3 Monitor_Production_Data_Collection=Monitor_Production_Data_Collection
+1 Glossary
+2 Glossary=Glossary

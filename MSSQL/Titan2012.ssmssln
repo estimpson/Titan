@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# SQL Server Management Studio Solution File, Format Version 14.00
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Monitor.ARS", "Monitor.ARS\Monitor.ARS.ssmssqlproj", "{25D38732-22A1-43AF-AECD-5C41BE6478D6}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Titan2012Upgrade", "Titan2012Upgrade\Titan2012Upgrade.ssmssqlproj", "{9AFC8DF3-6FC9-42EE-A31E-ACE10D37822C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{25D38732-22A1-43AF-AECD-5C41BE6478D6}.Default|Default.ActiveCfg = Default
+		{22B3FC22-4C13-464A-A8EB-35703893CE82}.Default|Default.ActiveCfg = Default
+		{9AFC8DF3-6FC9-42EE-A31E-ACE10D37822C}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

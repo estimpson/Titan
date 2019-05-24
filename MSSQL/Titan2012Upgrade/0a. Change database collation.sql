@@ -1,0 +1,10 @@
+USE [master]
+GO
+ALTER DATABASE [Monitor] SET single_user WITH ROLLBACK IMMEDIATE
+GO
+USE [master]
+GO
+ALTER DATABASE [Monitor] COLLATE Latin1_General_CI_AS
+GO
+ALTER DATABASE [Monitor] SET  multi_user WITH ROLLBACK IMMEDIATE
+go

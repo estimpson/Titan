@@ -1,0 +1,37 @@
+Procedures for installation of GMEDIFACT interface for Monitor and STXW release 4.2L (RC-3)
+
+Use the following instructions to install the GMEDIFACT for DELJIT and DELFOR
+
+1. Update STXw
+       - Make sure you are using the 4.2 (RC-3) version of STXW.
+       - Merge map files.(refer to document 'EDIFACT_map_merge.txt')
+       
+2. Update Registry on client that will be processing the DELJIT and DELFOR into MONITOR.
+       - Entry should be for GM1DELJIT and path should be C:\GMEDIFACT\GM1_deljit_MAP.ini
+       - Entry for file list should be looking for DELJIT.txt to process the DELJIT.
+       - DELFOR is in standard dx-fx-ff.080.
+
+3. Create a GMEDIFACT directory on C drive of client that will be processing DELJIT and DELFOR.
+4. Copy all files recieved in e-mail to this directory.
+5. Apply SQL files to dB through ISQL.
+6. UNZIP Executor.zip.
+7. Copy monitor.ini , pbodb60.ini , id.pbd and the dll files that are in your current MONITOR 
+dirctory to the directory you placed the Executor files.
+8. Run this new mex.exe to process your GM DELJIT and DELFOR.
+
+Use the following instuctions to install the GMEDIFACT for DESADV.
+
+1. Update edi_setups in MONITOR.
+      -Overlay code should read GM2 for GM destinations
+      -Make sure trading partner code for GM destinations matches STXw.
+2. Update edilist.ini on client that generates ASN.
+      -Add entry for GM2. The name of the ini file sent is 'gm_desadv_GM2_MGO.ini'
+      - Make sure the gm_desadv.pbl is where the gm_desadv_GM2_MGO.ini is pointing.
+3. Make copy of current medenh.pbd on client that processes ASN.
+4. Copy the new medenh.pbd to client that processes ASN.
+5. Modify gm_desadv_GM2_MGO.ini so that the line that begins 'Output=' is edited to point to where you
+want the DESADV.TXT to be written.
+6. Modify this same line for all of your ASN ini files. The output file name should remain dx-fx-ff.080 for non EDIFACT.
+
+If you encouter problems call Andre @ 248 761-0919 or Craig @ 248 761-0923
+

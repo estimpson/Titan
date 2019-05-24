@@ -1,0 +1,7 @@
+To merge MAPS into STXw, go into Administration and select the merge function.  Browse for the
+file and select it.  Click Contents.  Highlight the line that appears in the
+Contents window and select the Merge button.  Once the map has been merged,
+attach it to the Trading Partner by selecting the DESADV/DELJIT transactionS,
+clicking Maps/Forms, clicking the down-arrow next to Application-to-EDI map,
+and selecting AEGM2DSV/EAGM1JIT.  The maps can then be run through a script or
+manually be selecting Application File to EDI within Operations.

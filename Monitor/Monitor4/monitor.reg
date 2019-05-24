@@ -1,0 +1,51 @@
+REGEDIT4
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Monitor Software\TMFMS\Library List]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Monitor Software\TMFMS\Library List\The Monitor]
+"monitor.pbd"=""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Monitor Software\TMFMS\Library List\Shipping Dock]
+"mst.pbd"=""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Monitor Software\TMFMS\Library List\Inventory Control]
+"mst.pbd"=""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Monitor Software\TMFMS\Library List\Super Cop]
+"msc.pbd"=""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Monitor Software\TMFMS\Library List\Costing]
+"mct.pbd"=""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Monitor Software\TMFMS\Library List\Packing Line]
+"mpl.pbd"=""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Monitor Software\TMFMS\Library List\Executive Information]
+"mei.pbd"=""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Monitor Software\TMFMS\Library List\Receiving Dock]
+"mrd.pbd"=""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Monitor Software\TMFMS\Library List\Shop Floor]
+"msf.pbd"=""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Monitor Software\TMFMS\Library List\Monitor Utilities]
+"mul.pbd"=""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Monitor Software\TMFMS\Library List\PO Requisition]
+"mreq.pbd"=""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Monitor Software\TMFMS\Library List\Monitor Executor]
+"mex.pbd"=""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Monitor Software\TMFMS\Library List\Sequenced Packing Line]
+"msp.pbd"=""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Monitor Software\TMFMS\Library List\Shop Floor 1050]
+"msf1050.pbd"=""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Monitor Software\TMFMS\Library List\Monitor Production Data Collection]
+"monlab.pbd"=""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Monitor Software\TMFMS\Library List\Monitor Order Validation]
+"ordervalidation.pbd"=""

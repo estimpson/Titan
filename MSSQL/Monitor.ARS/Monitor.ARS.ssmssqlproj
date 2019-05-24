@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Monitor.ARS">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="titan2012:sa">
+          <Created>2019-04-09T14:35:44.2237979-04:00</Created>
+          <Type>SQL</Type>
+          <Server>titan2012</Server>
+          <UserName>sa</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB />
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="Titan2017:sa">
+          <Created>2019-05-07T13:25:07.9194226-04:00</Created>
+          <Type>SQL</Type>
+          <Server>Titan2017</Server>
+          <UserName>sa</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB />
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="Procedure.Monitor.ARS.usp_BuildXRt.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:Titan2017:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>Titan2017</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Procedure.Monitor.ARS.usp_BuildXRt.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Procedure.Monitor.custom.usp_GetSalesReleases.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:Titan2017:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>Titan2017</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Procedure.Monitor.custom.usp_GetSalesReleases.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Schema.Monitor.ARS.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:Titan2017:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>Titan2017</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Schema.Monitor.ARS.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Schema.Monitor.FT.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:Titan2017:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>Titan2017</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Schema.Monitor.FT.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Table.Monitor.ARS.StampingSetup.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:Titan2017:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>Titan2017</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Table.Monitor.ARS.StampingSetup.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Table.Monitor.FT.BOM.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:Titan2017:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>Titan2017</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Table.Monitor.FT.BOM.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Table.Monitor.FT.PartRouter.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:Titan2017:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>Titan2017</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Table.Monitor.FT.PartRouter.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Table.Monitor.FT.XRt.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:Titan2017:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>Titan2017</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Table.Monitor.FT.XRt.sql</FullPath>
+        </FileNode>
+        <FileNode Name="View.MONITOR.custom.Monday.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:Titan2017:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>Titan2017</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>View.MONITOR.custom.Monday.sql</FullPath>
+        </FileNode>
+        <FileNode Name="View.MONITOR.custom.SalesReleases.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:Titan2017:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>Titan2017</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>View.MONITOR.custom.SalesReleases.sql</FullPath>
+        </FileNode>
+        <FileNode Name="View.Monitor.FT.vwBOM.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:Titan2017:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>Titan2017</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>View.Monitor.FT.vwBOM.sql</FullPath>
+        </FileNode>
+        <FileNode Name="View.Monitor.FT.vwPRt.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:Titan2017:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>Titan2017</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>View.Monitor.FT.vwPRt.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>

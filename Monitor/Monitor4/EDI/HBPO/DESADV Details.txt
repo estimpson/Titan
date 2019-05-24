@@ -1,0 +1,15 @@
+loop control counter (pallet cnt)
+HBPO pkg - pallet
+pallet serial
+carton cnt
+carton pkg
+carton size
+line #
+Part#
+Our Part#
+rev #?
+ship qty
+country of origin
+ref
+dock
+10 serials

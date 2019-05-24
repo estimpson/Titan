@@ -1,0 +1,10 @@
+[DEFAULT]
+BASEURL=https://web.gsec.ford.com/trans/translog.htm
+[DOC#3#5#7]
+BASEURL=https://web.gsec.ford.com/trans/transactions.htm
+ORIGURL=/trans/transactions.htm
+[InternetShortcut]
+URL=https://web.gsec.ford.com/trans/translog.htm
+Modified=C066B0B7EA19C50156
+[MyIE2]
+VisitTimes=5

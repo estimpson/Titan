@@ -1,0 +1,122 @@
+[General]
+Passes=5
+
+
+[Pass 1 General]
+WriteFile=OFF
+ReadFile=OFF
+QueryDW=OFF
+MasterDW=ON
+
+[Pass 1 MasterDW]
+LibraryFile=\\TT2K\monitor forms\edi\textron\inbound\textron_830.pbl
+DataObject=d_830_exception
+Archive=OFF
+Retrieve=ON
+Update=OFF
+Display=ON
+Print=ON
+
+[Pass 1 MasterDW Print]
+PrintBlank=OFF
+CancelDialogue=OFF
+
+;[Pass 1 QueryDW]
+;LibraryFile=\\TT2K\monitor forms\edi\textron\inbound\textron_830.pbl
+;DataObject=
+;EndPass=
+
+
+;[Pass 1 QueryDW DefineArguments]
+;Argument1=1
+;Item1=
+
+;[Pass 1 MasterDW Retrieve]
+;Argument1=1
+
+;[Pass 1 WriteFile]
+;WriteFile=
+;Mode=APPEND
+;LineFeed=OFF
+;LineLength=80
+;LineNoLength=2
+;LineNoPos=1
+
+;start of header information of stx transaction
+;[Pass 1 WriteFile Map]
+
+[Pass 2 General]
+WriteFile=OFF
+ReadFile=OFF
+QueryDW=OFF
+MasterDW=ON
+
+[Pass 2 MasterDW]
+LibraryFile=\\TT2K\monitor forms\edi\textron\inbound\textron_830.pbl
+DataObject=d_cum_discrepency
+Archive=OFF
+Retrieve=ON
+Update=OFF
+Display=ON
+Print=OFF
+
+[Pass 2 MasterDW Print]
+PrintBlank=OFF
+CancelDialogue=OFF
+
+[Pass 3 General]
+WriteFile=OFF
+ReadFile=OFF
+QueryDW=OFF
+MasterDW=ON
+
+[Pass 3 MasterDW]
+LibraryFile=\\TT2K\monitor forms\edi\textron\inbound\textron_830.pbl
+DataObject=d_ecl_discrepency
+Archive=OFF
+Retrieve=ON
+Update=OFF
+Display=ON
+Print=ON
+
+[Pass 3 MasterDW Print]
+PrintBlank=OFF
+CancelDialogue=OFF
+
+
+[Pass 4 General]
+WriteFile=OFF
+ReadFile=OFF
+QueryDW=OFF
+MasterDW=ON
+
+[Pass 4 MasterDW]
+LibraryFile=\\TT2K\monitor forms\edi\textron\inbound\textron_830.pbl
+DataObject=d_textron_notes
+Archive=OFF
+Retrieve=ON
+Update=OFF
+Display=ON
+Print=ON
+
+[Pass 4 MasterDW Print]
+PrintBlank=OFF
+CancelDialogue=OFF
+
+[Pass 5 General]
+WriteFile=OFF
+ReadFile=OFF
+QueryDW=OFF
+MasterDW=ON
+
+[Pass 5 MasterDW]
+LibraryFile=\\TT2K\monitor forms\edi\textron\inbound\textron_830.pbl
+DataObject=d_clear_data
+Archive=OFF
+Retrieve=ON
+Update=OFF
+Display=ON
+Print=OFF
+
+
+
