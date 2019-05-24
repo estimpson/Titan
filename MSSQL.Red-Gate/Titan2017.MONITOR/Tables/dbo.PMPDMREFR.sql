@@ -1,0 +1,18 @@
+CREATE TABLE [dbo].[PMPDMREFR]
+(
+[OBJT] [int] NOT NULL,
+[CARD] [varchar] (10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[CMMT] [int] NULL,
+[CPRT] [int] NULL,
+[DRUL] [int] NULL,
+[FKCN] [varchar] (254) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[GENE] [int] NULL,
+[IMPL] [varchar] (2) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[SRTJ] [int] NULL,
+[URUL] [int] NULL,
+[CROL] [varchar] (254) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[PROL] [varchar] (254) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
+) ON [PRIMARY]
+GO
+CREATE UNIQUE NONCLUSTERED INDEX [PMPDMREFR_PK] ON [dbo].[PMPDMREFR] ([OBJT]) WITH (FILLFACTOR=90) ON [PRIMARY]
+GO

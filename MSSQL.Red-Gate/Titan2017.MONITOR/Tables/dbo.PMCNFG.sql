@@ -1,0 +1,15 @@
+CREATE TABLE [dbo].[PMCNFG]
+(
+[CNFG] [int] NOT NULL,
+[NAME] [varchar] (254) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+[CODE] [varchar] (254) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+[CMMT] [int] NULL,
+[OCUS] [int] NOT NULL,
+[OCDT] [datetime] NULL,
+[OMUS] [int] NULL,
+[OMDT] [datetime] NULL,
+[FLDR] [int] NULL
+) ON [PRIMARY]
+GO
+CREATE UNIQUE NONCLUSTERED INDEX [PMCNFG_PK] ON [dbo].[PMCNFG] ([CNFG]) WITH (FILLFACTOR=90) ON [PRIMARY]
+GO
