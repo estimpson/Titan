@@ -1,16 +1,17 @@
 CREATE TABLE [ARS].[SteelReleases_PO_Import]
 (
-[Status] [int] NOT NULL CONSTRAINT [DF__SteelRele__Statu__12549193] DEFAULT ((0)),
-[Type] [int] NOT NULL CONSTRAINT [DF__SteelRelea__Type__1348B5CC] DEFAULT ((0)),
+[Status] [int] NOT NULL CONSTRAINT [DF__SteelRele__Statu__4B8D0EEF] DEFAULT ((0)),
+[Type] [int] NOT NULL CONSTRAINT [DF__SteelRelea__Type__4C813328] DEFAULT ((0)),
 [RawPart] [varchar] (25) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
 [PoDate] [datetime] NOT NULL,
 [Quantity] [numeric] (20, 6) NOT NULL,
+[Note] [varchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 [ImportDT] [datetime] NULL,
 [RowID] [int] NOT NULL IDENTITY(1, 1),
-[RowCreateDT] [datetime] NULL CONSTRAINT [DF__SteelRele__RowCr__143CDA05] DEFAULT (getdate()),
-[RowCreateUser] [sys].[sysname] NOT NULL CONSTRAINT [DF__SteelRele__RowCr__1530FE3E] DEFAULT (suser_name()),
-[RowModifiedDT] [datetime] NULL CONSTRAINT [DF__SteelRele__RowMo__16252277] DEFAULT (getdate()),
-[RowModifiedUser] [sys].[sysname] NOT NULL CONSTRAINT [DF__SteelRele__RowMo__171946B0] DEFAULT (suser_name())
+[RowCreateDT] [datetime] NULL CONSTRAINT [DF__SteelRele__RowCr__4D755761] DEFAULT (getdate()),
+[RowCreateUser] [sys].[sysname] NOT NULL CONSTRAINT [DF__SteelRele__RowCr__4E697B9A] DEFAULT (suser_name()),
+[RowModifiedDT] [datetime] NULL CONSTRAINT [DF__SteelRele__RowMo__4F5D9FD3] DEFAULT (getdate()),
+[RowModifiedUser] [sys].[sysname] NOT NULL CONSTRAINT [DF__SteelRele__RowMo__5051C40C] DEFAULT (suser_name())
 ) ON [PRIMARY]
 GO
 SET QUOTED_IDENTIFIER ON
@@ -174,5 +175,5 @@ Results {
 }
 */
 GO
-ALTER TABLE [ARS].[SteelReleases_PO_Import] ADD CONSTRAINT [PK__SteelRel__FFEE74516CFCBC01] PRIMARY KEY CLUSTERED  ([RowID]) ON [PRIMARY]
+ALTER TABLE [ARS].[SteelReleases_PO_Import] ADD CONSTRAINT [PK__SteelRel__FFEE7451A7D3EB50] PRIMARY KEY CLUSTERED  ([RowID]) ON [PRIMARY]
 GO
