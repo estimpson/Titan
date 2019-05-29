@@ -1,52 +1,44 @@
 
 /*
-Create Table.Monitor.ARS.StampingSetup.sql
+Create Table.MONITOR.FxSYS.USP_Calls.sql
 */
 
-use Monitor
+use MONITOR
 go
 
-/*
-exec FT.sp_DropForeignKeys
+--drop table FxSYS.USP_Calls
+if	objectproperty(object_id('FxSYS.USP_Calls'), 'IsTable') is null begin
 
-drop table ARS.StampingSetup
-
-exec FT.sp_AddForeignKeys
-*/
-if	objectproperty(object_id('ARS.StampingSetup'), 'IsTable') is null begin
-
-	create table ARS.StampingSetup
-	(	FinishedGood varchar(25) not null
-	,	RawPart varchar(25) not null
-	,	Supplier varchar(10) null
-	,	PONumber int null
-	,	Status int not null default(0)
+	create table FxSYS.USP_Calls
+	(	Status int not null default(0)
 	,	Type int not null default(0)
+	,	USP_Name sysname
+	,	BeginDT datetime
+	,	EndDT datetime
+	,	InArguments varchar(max)
+	,	OutArguments varchar(max)
 	,	RowID int identity(1,1) primary key clustered
 	,	RowCreateDT datetime default(getdate())
 	,	RowCreateUser sysname default(suser_name())
 	,	RowModifiedDT datetime default(getdate())
 	,	RowModifiedUser sysname default(suser_name())
-	,	unique nonclustered
-		(	RawPart
-		)
 	)
 end
 go
 
 /*
-Create trigger ARS.tr_StampingSetup_uRowModified on ARS.StampingSetup
+Create trigger FxSYS.tr_USP_Calls_uRowModified on FxSYS.USP_Calls
 */
 
---use Monitor
+--use MONITOR
 --go
 
-if	objectproperty(object_id('ARS.tr_StampingSetup_uRowModified'), 'IsTrigger') = 1 begin
-	drop trigger ARS.tr_StampingSetup_uRowModified
+if	objectproperty(object_id('FxSYS.tr_USP_Calls_uRowModified'), 'IsTrigger') = 1 begin
+	drop trigger FxSYS.tr_USP_Calls_uRowModified
 end
 go
 
-create trigger ARS.tr_StampingSetup_uRowModified on ARS.StampingSetup after update
+create trigger FxSYS.tr_USP_Calls_uRowModified on FxSYS.USP_Calls after update
 as
 declare
 	@TranDT datetime
@@ -67,7 +59,7 @@ declare
 	@Error integer,
 	@RowCount integer
 
-set	@ProcName = user_name(objectproperty(@@procid, 'OwnerId')) + '.' + object_name(@@procid)  -- e.g. ARS.usp_Test
+set	@ProcName = user_name(objectproperty(@@procid, 'OwnerId')) + '.' + object_name(@@procid)  -- e.g. FxSYS.usp_Test
 --- </Error Handling>
 
 begin try
@@ -87,16 +79,16 @@ begin try
 	--- <Body>
 	if	not update(RowModifiedDT) begin
 		--- <Update rows="*">
-		set	@TableName = 'ARS.StampingSetup'
+		set	@TableName = 'FxSYS.USP_Calls'
 		
 		update
-			[tableAlias]
+			uc
 		set	RowModifiedDT = getdate()
 		,	RowModifiedUser = suser_name()
 		from
-			ARS.StampingSetup [tableAlias]
+			FxSYS.USP_Calls uc
 			join inserted i
-				on i.RowID = [tableAlias].RowID
+				on i.RowID = uc.RowID
 		
 		select
 			@Error = @@Error,
@@ -171,19 +163,19 @@ begin transaction Test
 go
 
 insert
-	ARS.StampingSetup
+	FxSYS.USP_Calls
 ...
 
 update
 	...
 from
-	ARS.StampingSetup
+	FxSYS.USP_Calls
 ...
 
 delete
 	...
 from
-	ARS.StampingSetup
+	FxSYS.USP_Calls
 ...
 go
 
@@ -203,3 +195,18 @@ Results {
 */
 go
 
+select
+	uc.Status
+,   uc.Type
+,   uc.USP_Name
+,   uc.BeginDT
+,   uc.EndDT
+,   uc.InArguments
+,   uc.OutArguments
+,   uc.RowID
+,   uc.RowCreateDT
+,   uc.RowCreateUser
+,   uc.RowModifiedDT
+,   uc.RowModifiedUser
+from
+	FXSYS.USP_Calls uc

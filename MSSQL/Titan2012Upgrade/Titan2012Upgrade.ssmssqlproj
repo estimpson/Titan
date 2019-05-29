@@ -3,18 +3,6 @@
   <Items>
     <LogicalFolder Name="Connections" Type="2" Sorted="true">
       <Items>
-        <ConnectionNode Name="titan2012:sa">
-          <Created>2019-04-27T13:51:28.9013239-04:00</Created>
-          <Type>SQL</Type>
-          <Server>titan2012</Server>
-          <UserName>sa</UserName>
-          <Authentication>SQL</Authentication>
-          <InitialDB>Monitor</InitialDB>
-          <LoginTimeout>30</LoginTimeout>
-          <ExecutionTimeout>0</ExecutionTimeout>
-          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
-          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
-        </ConnectionNode>
         <ConnectionNode Name="Titan2017:sa">
           <Created>2019-05-07T13:23:34.5420806-04:00</Created>
           <Type>SQL</Type>
@@ -32,9 +20,9 @@
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
         <FileNode Name="0. Simple Recovery.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:titan2012:False:sa</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>titan2012</AssociatedConnSrvName>
-          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
           <FullPath>0. Simple Recovery.sql</FullPath>
         </FileNode>
         <FileNode Name="0a. Change database collation.sql">
@@ -56,9 +44,9 @@
           <FullPath>2. Drop Foreign Keys.sql</FullPath>
         </FileNode>
         <FileNode Name="3. Drop Primary Keys.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:Titan2017:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>Titan2017</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
           <FullPath>3. Drop Primary Keys.sql</FullPath>
         </FileNode>
         <FileNode Name="3a. Drop indexes.sql">
@@ -74,9 +62,9 @@
           <FullPath>3b. Drop functions and computed columns.sql</FullPath>
         </FileNode>
         <FileNode Name="4. Fix column collation.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:titan2012:False:sa</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>titan2012</AssociatedConnSrvName>
-          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
           <FullPath>4. Fix column collation.sql</FullPath>
         </FileNode>
         <FileNode Name="5. Add Primary Keys.sql">

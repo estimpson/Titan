@@ -1,52 +1,55 @@
+--select
+--	*
+--from
+--	dbo.StampingSetup_PO_Import sspi
+--go
+
 
 /*
-Create Table.Monitor.ARS.StampingSetup.sql
+Create Table.MONITOR.ARS.SteelReleases_PO_Import.sql
 */
 
-use Monitor
+use MONITOR
 go
 
 /*
 exec FT.sp_DropForeignKeys
 
-drop table ARS.StampingSetup
+drop table ARS.SteelReleases_PO_Import
 
 exec FT.sp_AddForeignKeys
 */
-if	objectproperty(object_id('ARS.StampingSetup'), 'IsTable') is null begin
+if	objectproperty(object_id('ARS.SteelReleases_PO_Import'), 'IsTable') is null begin
 
-	create table ARS.StampingSetup
-	(	FinishedGood varchar(25) not null
-	,	RawPart varchar(25) not null
-	,	Supplier varchar(10) null
-	,	PONumber int null
-	,	Status int not null default(0)
+	create table ARS.SteelReleases_PO_Import
+	(	Status int not null default(0)
 	,	Type int not null default(0)
+	,	RawPart varchar(25) not null
+	,	PoDate datetime not null
+	,	Quantity numeric(20,6) not null
+	,	ImportDT datetime null
 	,	RowID int identity(1,1) primary key clustered
 	,	RowCreateDT datetime default(getdate())
 	,	RowCreateUser sysname default(suser_name())
 	,	RowModifiedDT datetime default(getdate())
 	,	RowModifiedUser sysname default(suser_name())
-	,	unique nonclustered
-		(	RawPart
-		)
 	)
 end
 go
 
 /*
-Create trigger ARS.tr_StampingSetup_uRowModified on ARS.StampingSetup
+Create trigger ARS.tr_SteelReleases_PO_Import_uRowModified on ARS.SteelReleases_PO_Import
 */
 
---use Monitor
+--use MONITOR
 --go
 
-if	objectproperty(object_id('ARS.tr_StampingSetup_uRowModified'), 'IsTrigger') = 1 begin
-	drop trigger ARS.tr_StampingSetup_uRowModified
+if	objectproperty(object_id('ARS.tr_SteelReleases_PO_Import_uRowModified'), 'IsTrigger') = 1 begin
+	drop trigger ARS.tr_SteelReleases_PO_Import_uRowModified
 end
 go
 
-create trigger ARS.tr_StampingSetup_uRowModified on ARS.StampingSetup after update
+create trigger ARS.tr_SteelReleases_PO_Import_uRowModified on ARS.SteelReleases_PO_Import after update
 as
 declare
 	@TranDT datetime
@@ -87,16 +90,16 @@ begin try
 	--- <Body>
 	if	not update(RowModifiedDT) begin
 		--- <Update rows="*">
-		set	@TableName = 'ARS.StampingSetup'
+		set	@TableName = 'ARS.SteelReleases_PO_Import'
 		
 		update
-			[tableAlias]
+			srpi
 		set	RowModifiedDT = getdate()
 		,	RowModifiedUser = suser_name()
 		from
-			ARS.StampingSetup [tableAlias]
+			ARS.SteelReleases_PO_Import srpi
 			join inserted i
-				on i.RowID = [tableAlias].RowID
+				on i.RowID = srpi.RowID
 		
 		select
 			@Error = @@Error,
@@ -171,19 +174,19 @@ begin transaction Test
 go
 
 insert
-	ARS.StampingSetup
+	ARS.SteelReleases_PO_Import
 ...
 
 update
 	...
 from
-	ARS.StampingSetup
+	ARS.SteelReleases_PO_Import
 ...
 
 delete
 	...
 from
-	ARS.StampingSetup
+	ARS.SteelReleases_PO_Import
 ...
 go
 

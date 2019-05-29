@@ -1,52 +1,52 @@
 
 /*
-Create Table.Monitor.ARS.StampingSetup.sql
+Create Table.MONITOR.FXSYS.ErrorLog.sql
 */
 
-use Monitor
+use MONITOR
 go
 
 /*
 exec FT.sp_DropForeignKeys
 
-drop table ARS.StampingSetup
+drop table FXSYS.ErrorLog
 
 exec FT.sp_AddForeignKeys
 */
-if	objectproperty(object_id('ARS.StampingSetup'), 'IsTable') is null begin
+if	objectproperty(object_id('FXSYS.ErrorLog'), 'IsTable') is null begin
 
-	create table ARS.StampingSetup
-	(	FinishedGood varchar(25) not null
-	,	RawPart varchar(25) not null
-	,	Supplier varchar(10) null
-	,	PONumber int null
-	,	Status int not null default(0)
+	create table FXSYS.ErrorLog
+	(	Status int not null default(0)
 	,	Type int not null default(0)
+	,	UserName sysname null
+	,	ErrorNumber int null
+	,	ErrorSeverity int null
+	,	ErrorState int null
+	,	ErrorProcedure sysname null
+	,	ErrorLine int null
+	,	ErrorMessage varchar(max) null
 	,	RowID int identity(1,1) primary key clustered
 	,	RowCreateDT datetime default(getdate())
 	,	RowCreateUser sysname default(suser_name())
 	,	RowModifiedDT datetime default(getdate())
 	,	RowModifiedUser sysname default(suser_name())
-	,	unique nonclustered
-		(	RawPart
-		)
 	)
 end
 go
 
 /*
-Create trigger ARS.tr_StampingSetup_uRowModified on ARS.StampingSetup
+Create trigger FXSYS.tr_ErrorLog_uRowModified on FXSYS.ErrorLog
 */
 
---use Monitor
+--use FxAztec
 --go
 
-if	objectproperty(object_id('ARS.tr_StampingSetup_uRowModified'), 'IsTrigger') = 1 begin
-	drop trigger ARS.tr_StampingSetup_uRowModified
+if	objectproperty(object_id('FXSYS.tr_ErrorLog_uRowModified'), 'IsTrigger') = 1 begin
+	drop trigger FXSYS.tr_ErrorLog_uRowModified
 end
 go
 
-create trigger ARS.tr_StampingSetup_uRowModified on ARS.StampingSetup after update
+create trigger FXSYS.tr_ErrorLog_uRowModified on FXSYS.ErrorLog after update
 as
 declare
 	@TranDT datetime
@@ -67,7 +67,7 @@ declare
 	@Error integer,
 	@RowCount integer
 
-set	@ProcName = user_name(objectproperty(@@procid, 'OwnerId')) + '.' + object_name(@@procid)  -- e.g. ARS.usp_Test
+set	@ProcName = user_name(objectproperty(@@procid, 'OwnerId')) + '.' + object_name(@@procid)  -- e.g. FXSYS.usp_Test
 --- </Error Handling>
 
 begin try
@@ -87,16 +87,16 @@ begin try
 	--- <Body>
 	if	not update(RowModifiedDT) begin
 		--- <Update rows="*">
-		set	@TableName = 'ARS.StampingSetup'
+		set	@TableName = 'FXSYS.ErrorLog'
 		
 		update
-			[tableAlias]
+			el
 		set	RowModifiedDT = getdate()
 		,	RowModifiedUser = suser_name()
 		from
-			ARS.StampingSetup [tableAlias]
+			FXSYS.ErrorLog el
 			join inserted i
-				on i.RowID = [tableAlias].RowID
+				on i.RowID = el.RowID
 		
 		select
 			@Error = @@Error,
@@ -171,19 +171,19 @@ begin transaction Test
 go
 
 insert
-	ARS.StampingSetup
+	FXSYS.ErrorLog
 ...
 
 update
 	...
 from
-	ARS.StampingSetup
+	FXSYS.ErrorLog
 ...
 
 delete
 	...
 from
-	ARS.StampingSetup
+	FXSYS.ErrorLog
 ...
 go
 
