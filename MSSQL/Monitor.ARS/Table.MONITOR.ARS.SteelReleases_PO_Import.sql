@@ -27,6 +27,7 @@ if	objectproperty(object_id('ARS.SteelReleases_PO_Import'), 'IsTable') is null b
 	,	RawPart varchar(25) not null
 	,	PoDate datetime not null
 	,	Quantity numeric(20,6) not null
+	,	Note varchar(255) null
 	,	ImportDT datetime null
 	,	RowID int identity(1,1) primary key clustered
 	,	RowCreateDT datetime default(getdate())

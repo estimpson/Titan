@@ -116,6 +116,7 @@ begin
 			,	PODate datetime
 			,	Quantity numeric(20,6)
 			,	PONumber int
+			,	Note varchar(255)
 			,	RowID int
 			)
 			
@@ -125,6 +126,7 @@ begin
 			,	PODate
 			,	Quantity
 			,	PONumber
+			,	Note
 			,	RowID
 			)
 			select
@@ -132,6 +134,7 @@ begin
 			,	srpi.PoDate
 			,	srpi.Quantity
 			,	ss.PONumber
+			,	srpi.Note
 			,	srpi.RowID
 			from
 				ARS.SteelReleases_PO_Import srpi
@@ -189,7 +192,7 @@ begin
 			,	unit_of_measure = coalesce(ph.std_unit, pv.receiving_um, pInv.standard_unit)
 			,	date_due = rr.PODate
 			,	status = 'A'
-			,	notes = null
+			,	notes = nullif(ltrim(rr.Note), '')
 			,	quantity = rr.Quantity
 			,	received = 0
 			,	balance = rr.Quantity
