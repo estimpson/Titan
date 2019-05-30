@@ -1,17 +1,17 @@
 
 /*
-Create Procedure.MONITOR.ARS.usp_SteelReleasas_ProcessImport.sql
+Create Procedure.MONITOR.ARS.usp_SteelReleases_ProcessImport.sql
 */
 
 use MONITOR
 go
 
-if	objectproperty(object_id('ARS.usp_SteelReleasas_ProcessImport'), 'IsProcedure') = 1 begin
-	drop procedure ARS.usp_SteelReleasas_ProcessImport
+if	objectproperty(object_id('ARS.usp_SteelReleases_ProcessImport'), 'IsProcedure') = 1 begin
+	drop procedure ARS.usp_SteelReleases_ProcessImport
 end
 go
 
-create procedure ARS.usp_SteelReleasas_ProcessImport
+create procedure ARS.usp_SteelReleases_ProcessImport
 	@User varchar(5)
 ,	@TranDT datetime = null out
 ,	@Result integer = null out
@@ -138,8 +138,16 @@ begin
 			,	srpi.RowID
 			from
 				ARS.SteelReleases_PO_Import srpi
-				join ARS.StampingSetup ss
-					on ss.RawPart = srpi.RawPart
+				cross apply
+					(	select top(1)
+							*
+						from
+							ARS.StampingSetup ss
+						where
+							ss.RawPart = srpi.RawPart
+						order by
+							ss.FinishedGood
+					) ss 
 			where
 				srpi.Status = 0
 
@@ -387,7 +395,7 @@ declare
 ,	@Error integer
 
 execute
-	@ProcReturn = ARS.usp_SteelReleasas_ProcessImport
+	@ProcReturn = ARS.usp_SteelReleases_ProcessImport
 	@FinishedPart = @FinishedPart
 ,	@ParentHeirarchID = @ParentHeirarchID
 ,	@TranDT = @TranDT out

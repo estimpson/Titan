@@ -25,7 +25,7 @@ if	objectproperty(object_id('ARS.SteelReleases_PO_Import'), 'IsTable') is null b
 	(	Status int not null default(0)
 	,	Type int not null default(0)
 	,	RawPart varchar(25) not null
-	,	PoDate datetime not null
+	,	PODate datetime not null
 	,	Quantity numeric(20,6) not null
 	,	Note varchar(255) null
 	,	ImportDT datetime null

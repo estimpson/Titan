@@ -3,7 +3,7 @@
 Create Table.Monitor.ARS.StampingSetup.sql
 */
 
-use Monitor
+use MONITOR
 go
 
 /*
@@ -28,7 +28,8 @@ if	objectproperty(object_id('ARS.StampingSetup'), 'IsTable') is null begin
 	,	RowModifiedDT datetime default(getdate())
 	,	RowModifiedUser sysname default(suser_name())
 	,	unique nonclustered
-		(	RawPart
+		(	FinishedGood
+		,	RawPart
 		)
 	)
 end
