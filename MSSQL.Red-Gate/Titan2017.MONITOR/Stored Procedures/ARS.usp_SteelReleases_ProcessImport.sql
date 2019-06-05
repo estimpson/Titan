@@ -3,8 +3,8 @@ GO
 SET ANSI_NULLS ON
 GO
 
-create procedure [ARS].[usp_SteelReleasas_ProcessImport]
-	@User varchar(5)
+create procedure [ARS].[usp_SteelReleases_ProcessImport]
+	@User varchar(5) = null
 ,	@TranDT datetime = null out
 ,	@Result integer = null out
 ,	@Debug int = 0
@@ -130,8 +130,16 @@ begin
 			,	srpi.RowID
 			from
 				ARS.SteelReleases_PO_Import srpi
-				join ARS.StampingSetup ss
-					on ss.RawPart = srpi.RawPart
+				cross apply
+					(	select top(1)
+							*
+						from
+							ARS.StampingSetup ss
+						where
+							ss.RawPart = srpi.RawPart
+						order by
+							ss.FinishedGood
+					) ss 
 			where
 				srpi.Status = 0
 
@@ -188,7 +196,7 @@ begin
 			,	quantity = rr.Quantity
 			,	received = 0
 			,	balance = rr.Quantity
-			,	price = coalesce(ph.price, pvpm.price)
+			,	price = coalesce(ph.price, pvpm.price, 0)
 			,	row_id = ph.next_seqno + row_number() over (partition by ph.po_number order by rr.PODate) - 1
 			,	RELEASE_NO = ph.release_no + 1
 			,	terms = ph.terms
@@ -199,7 +207,7 @@ begin
 			,	printed = 'N'
 			,	selected_for_print = 'N'
 			,	ship_via = ph.ship_via
-			,	alternate_price = coalesce(ph.price, pvpm.alternate_price)
+			,	alternate_price = coalesce(ph.price, pvpm.alternate_price, 0)
 			from
 				@RawReleases rr
 				join dbo.po_header ph
@@ -211,7 +219,7 @@ begin
 					on p.part = rr.RawPart
 				join dbo.part_inventory pInv
 					on pInv.part = rr.RawPart
-				cross apply
+				outer apply
 					(	select top(1)
 							*
 						from
@@ -379,7 +387,7 @@ declare
 ,	@Error integer
 
 execute
-	@ProcReturn = ARS.usp_SteelReleasas_ProcessImport
+	@ProcReturn = ARS.usp_SteelReleases_ProcessImport
 	@FinishedPart = @FinishedPart
 ,	@ParentHeirarchID = @ParentHeirarchID
 ,	@TranDT = @TranDT out

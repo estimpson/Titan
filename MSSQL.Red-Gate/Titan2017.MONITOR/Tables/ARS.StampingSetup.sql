@@ -4,13 +4,13 @@ CREATE TABLE [ARS].[StampingSetup]
 [RawPart] [varchar] (25) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
 [Supplier] [varchar] (10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 [PONumber] [int] NULL,
-[Status] [int] NOT NULL CONSTRAINT [DF__StampingS__Statu__1DC6443F] DEFAULT ((0)),
-[Type] [int] NOT NULL CONSTRAINT [DF__StampingSe__Type__1EBA6878] DEFAULT ((0)),
+[Status] [int] NOT NULL CONSTRAINT [DF__StampingS__Statu__617C500E] DEFAULT ((0)),
+[Type] [int] NOT NULL CONSTRAINT [DF__StampingSe__Type__62707447] DEFAULT ((0)),
 [RowID] [int] NOT NULL IDENTITY(1, 1),
-[RowCreateDT] [datetime] NULL CONSTRAINT [DF__StampingS__RowCr__1FAE8CB1] DEFAULT (getdate()),
-[RowCreateUser] [sys].[sysname] NOT NULL CONSTRAINT [DF__StampingS__RowCr__20A2B0EA] DEFAULT (suser_name()),
-[RowModifiedDT] [datetime] NULL CONSTRAINT [DF__StampingS__RowMo__2196D523] DEFAULT (getdate()),
-[RowModifiedUser] [sys].[sysname] NOT NULL CONSTRAINT [DF__StampingS__RowMo__228AF95C] DEFAULT (suser_name())
+[RowCreateDT] [datetime] NULL CONSTRAINT [DF__StampingS__RowCr__63649880] DEFAULT (getdate()),
+[RowCreateUser] [sys].[sysname] NOT NULL CONSTRAINT [DF__StampingS__RowCr__6458BCB9] DEFAULT (suser_name()),
+[RowModifiedDT] [datetime] NULL CONSTRAINT [DF__StampingS__RowMo__654CE0F2] DEFAULT (getdate()),
+[RowModifiedUser] [sys].[sysname] NOT NULL CONSTRAINT [DF__StampingS__RowMo__6641052B] DEFAULT (suser_name())
 ) ON [PRIMARY]
 GO
 SET QUOTED_IDENTIFIER ON
@@ -174,7 +174,7 @@ Results {
 }
 */
 GO
-ALTER TABLE [ARS].[StampingSetup] ADD CONSTRAINT [PK__Stamping__FFEE7451C273FD09] PRIMARY KEY CLUSTERED  ([RowID]) ON [PRIMARY]
+ALTER TABLE [ARS].[StampingSetup] ADD CONSTRAINT [PK__Stamping__FFEE74516BD1EBC7] PRIMARY KEY CLUSTERED  ([RowID]) ON [PRIMARY]
 GO
-ALTER TABLE [ARS].[StampingSetup] ADD CONSTRAINT [UQ__Stamping__EAF8D73545CA4C8A] UNIQUE NONCLUSTERED  ([RawPart]) ON [PRIMARY]
+ALTER TABLE [ARS].[StampingSetup] ADD CONSTRAINT [UQ__Stamping__A5E6FF309F7312E6] UNIQUE NONCLUSTERED  ([FinishedGood], [RawPart]) ON [PRIMARY]
 GO

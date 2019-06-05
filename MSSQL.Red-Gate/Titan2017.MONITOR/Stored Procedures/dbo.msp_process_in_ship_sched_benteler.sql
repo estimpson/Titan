@@ -724,13 +724,20 @@ DELETE	dbo.edi_benteler862_Header
 DELETE	dbo.edi_benteler862_Releases
 
 
-SELECT DISTINCT 'benteler Ship Schedule', message FROM dbo.log
-WHERE spid = @@spid 
-AND log.message LIKE '%Blanket order does%' OR log.message LIKE '%Duplicate%'
-UNION ALL
+--SELECT DISTINCT 'benteler Ship Schedule', message FROM dbo.log
+--WHERE spid = @@spid 
+--AND log.message LIKE '%Blanket order does%' OR log.message LIKE '%Duplicate%'
+--UNION ALL
+select
+	'benteler Ship Schedule', l.message
+from
+	dbo.log l
+where
+	l.spid = @@spid
 SELECT DISTINCT 'Benteler Ship Schedule', ' 862 Benteler Ship Schedule Processing Completed'
 
 RETURN 0
+
 
 
 

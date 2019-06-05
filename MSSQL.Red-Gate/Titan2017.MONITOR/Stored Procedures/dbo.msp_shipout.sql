@@ -2,11 +2,6 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS ON
 GO
-
-
-
-
-
 CREATE procedure [dbo].[msp_shipout] (
 	@shipper	integer,
 	@invdate	datetime=null )
@@ -47,6 +42,18 @@ as
 --	9.	Close bill of lading.
 --	10.	Assign invoice number.
 ---------------------------------------------------------------------------------------
+
+--	0. Truck number is required.
+if	(	select
+  			nullif(rtrim(s.truck_number), '')
+  		from
+  			dbo.shipper s
+		where
+			s.id = @shipper
+  	) is null begin
+	RAISERROR ('Truck number not specified and is required!', 16, 1)
+	return -1
+end
 
 --	1.	Declare all the required local variables.
 declare	@returnvalue	integer,

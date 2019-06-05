@@ -3,7 +3,7 @@ GO
 SET ANSI_NULLS ON
 GO
 
-CREATE procedure [dbo].[usp_StampingSetup_GetPoNumbers]
+create procedure [ARS].[usp_StampingSetup_GetPoNumbers]
 	@VendorCode varchar(10) 
 ,	@BlanketPart varchar(30) = null
 as

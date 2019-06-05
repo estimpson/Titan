@@ -3,7 +3,7 @@ GO
 SET ANSI_NULLS ON
 GO
 
-create procedure [dbo].[usp_StampingSetup_GetRawParts]
+create procedure [ARS].[usp_StampingSetup_GetRawParts]
 as
 begin
 	begin try

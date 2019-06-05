@@ -4,33 +4,35 @@ SET ANSI_NULLS ON
 GO
 
 
-CREATE procedure [dbo].[usp_StampingSetup_PO_Import]
+CREATE procedure [ARS].[usp_SteelReleases_PO_Import]
 as
 begin
 	set nocount on
 
 	declare 
-		@ProcName nvarchar(100) = N'dbo.usp_StampingSetup_PO_Import'
+		@ProcName nvarchar(100) = N'ARS.usp_SteelReleases_PO_Import'
 	,	@CustomError as nvarchar(1000)
 
 
 	begin try
 	begin transaction
 
-		insert into dbo.StampingSetup_PO_Import
+		insert into ARS.SteelReleases_PO_Import
 		(
 			RawPart
-		,	PoDate
+		,	PODate
 		,	Quantity
-		,	ImportDateTime
+		,	Note
+		,	ImportDT
 		)
 		select
 			tpi.RawPart
-		,	convert(datetime2, tpi.PoDate)
-		,	convert(int, tpi.Quantity)
-		,	convert(datetime2, tpi.ImportDateTime)
+		,	convert(datetime, tpi.PoDate)
+		,	convert(decimal(20,6), tpi.Quantity)
+		,	tpi.Note
+		,	null
 		from
-			dbo.TempPoImport tpi
+			ARS.TempPoImport tpi
 		where
 			coalesce(tpi.RawPart, '') <> ''
 

@@ -5,7 +5,7 @@ GO
 
 
 
-CREATE procedure [dbo].[usp_StampingSetup_GetAll]
+create procedure [ARS].[usp_StampingSetup_GetAll]
 	@Sort varchar(20)
 as
 begin
@@ -13,49 +13,49 @@ begin
 		
 		if (@Sort = 'FinishedGoods') begin
 			select
-				ss.ID
+				ss.RowID
 			,	ss.FinishedGood
 			,	ss.RawPart
 			,	ss.Supplier
-			,	ss.PoNumber
+			,	ss.PONumber
 			from
-				dbo.StampingSetup ss
+				ARS.StampingSetup ss
 			order by
 				ss.FinishedGood
 		end
 		else if (@Sort = 'RawParts') begin
 			select
-				ss.ID
+				ss.RowID
 			,	ss.FinishedGood
 			,	ss.RawPart
 			,	ss.Supplier
-			,	ss.PoNumber
+			,	ss.PONumber
 			from
-				dbo.StampingSetup ss
+				ARS.StampingSetup ss
 			order by
 				ss.RawPart
 		end
 		else if (@Sort = 'Supplier') begin
 			select
-				ss.ID
+				ss.RowID
 			,	ss.FinishedGood
 			,	ss.RawPart
 			,	ss.Supplier
-			,	ss.PoNumber
+			,	ss.PONumber
 			from
-				dbo.StampingSetup ss
+				ARS.StampingSetup ss
 			order by
 				ss.Supplier
 		end
 		else begin
 			select
-				ss.ID
+				ss.RowID
 			,	ss.FinishedGood
 			,	ss.RawPart
 			,	ss.Supplier
-			,	ss.PoNumber
+			,	ss.PONumber
 			from
-				dbo.StampingSetup ss
+				ARS.StampingSetup ss
 			order by
 				ss.PoNumber
 		end

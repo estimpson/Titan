@@ -4,7 +4,7 @@ SET ANSI_NULLS ON
 GO
 
 
-CREATE procedure [dbo].[usp_StampingSetup_GetVendors]
+create procedure [ARS].[usp_StampingSetup_GetVendors]
 as
 begin
 	begin try
