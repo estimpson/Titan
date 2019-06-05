@@ -5,11 +5,11 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Monitor.ARS", "Monitor.ARS\Monitor.ARS.ssmssqlproj", "{25D38732-22A1-43AF-AECD-5C41BE6478D6}"
 EndProject
-Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Titan2012Upgrade", "Titan2012Upgrade\Titan2012Upgrade.ssmssqlproj", "{9AFC8DF3-6FC9-42EE-A31E-ACE10D37822C}"
-EndProject
 Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "MONITOR.FXSYS", "MONITOR.FXSYS\MONITOR.FXSYS.ssmssqlproj", "{88666B17-5192-4FBC-BD8B-A3E37CB5FEAB}"
 EndProject
 Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "MONITOR.FT", "MONITOR.FT\MONITOR.FT.ssmssqlproj", "{A512EA6B-0E70-4857-A0A0-CF670647CC58}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "MONITOR.ShippingDock", "MONITOR.ShippingDock\MONITOR.ShippingDock.ssmssqlproj", "{7A9960EB-66A8-4806-A805-6F0CE6DD00E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{25D38732-22A1-43AF-AECD-5C41BE6478D6}.Default|Default.ActiveCfg = Default
-		{9AFC8DF3-6FC9-42EE-A31E-ACE10D37822C}.Default|Default.ActiveCfg = Default
-		{7A1C50CF-9FAF-420D-9172-212757BF62E6}.Default|Default.ActiveCfg = Default
 		{88666B17-5192-4FBC-BD8B-A3E37CB5FEAB}.Default|Default.ActiveCfg = Default
 		{A512EA6B-0E70-4857-A0A0-CF670647CC58}.Default|Default.ActiveCfg = Default
+		{CCD9C1D4-E605-46DE-A676-20D62E55D1B2}.Default|Default.ActiveCfg = Default
+		{7A9960EB-66A8-4806-A805-6F0CE6DD00E0}.Default|Default.ActiveCfg = Default
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -25,11 +25,11 @@
           <AssociatedConnUserName>sa</AssociatedConnUserName>
           <FullPath>Procedure.Monitor.ARS.usp_BuildXRt.sql</FullPath>
         </FileNode>
-        <FileNode Name="Procedure.MONITOR.ARS.usp_SteelReleasas_ProcessImport.sql">
+        <FileNode Name="Procedure.MONITOR.ARS.usp_SteelReleases_ProcessImport.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:Titan2017:False:sa</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>Titan2017</AssociatedConnSrvName>
           <AssociatedConnUserName>sa</AssociatedConnUserName>
-          <FullPath>Procedure.MONITOR.ARS.usp_SteelReleasas_ProcessImport.sql</FullPath>
+          <FullPath>Procedure.MONITOR.ARS.usp_SteelReleases_ProcessImport.sql</FullPath>
         </FileNode>
         <FileNode Name="Procedure.Monitor.custom.usp_GetSalesReleases.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:Titan2017:False:sa</AssociatedConnectionMoniker>
