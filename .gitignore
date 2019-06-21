@@ -351,3 +351,28 @@ Monitor/Monitor4.6 Build 20041231/
 *.db
 *.isu
 *.rar
+ARS/Docs/TestImport/Titan_POImport_Template MODATEK.xlsx
+EDI/ASN Samples/Benteler_856.xml
+EDI/ASN Samples/Formet_856.xml
+EDI/ASN Samples/GMBFT_DESADV.XML
+EDI/ASN Samples/GMPAF_DESADV.XML
+EDI/ASN Samples/HBPO_DESADV.XML
+EDI/ASN Samples/Modatek_856.XML
+EDI/iConnect/Aztec Database Scripts/AztecDbScripts/SQLQuery1.sql
+EDI/iConnect/Aztec Database Scripts/AztecDbScripts/SQLQuery2.sql
+EDI/iConnect/Aztec Database Scripts/AztecDbScripts/SQLQuery3.sql
+EDI/iConnect/Aztec Database Scripts/AztecDbScripts/SQLQuery4.sql
+EDI/iConnect/Aztec Database Scripts/AztecDbScripts/SQLQuery5.sql
+EDI/iConnect/Aztec Database Scripts/FxEDI/RawEDIData/CustomerEDI/FTPCommands/ftpReceiveInbound.txt
+EDI/iConnect/Aztec Database Scripts/FxEDI/RawEDIData/CustomerEDI/FTPCommands/ftpSendOutbound.txt
+EDI/iConnect/Aztec Database Scripts/FxEDI/RawEDIData/CustomerEDI/FTPCommands/ReceiveInbound_v2.cmd
+EDI/iConnect/Aztec Database Scripts/FxEDI/RawEDIData/CustomerEDI/FTPCommands/SendOutbound_v2.cmd
+EDI/iConnect/Empire Database Scripts/EmpireDbScripts/SQLQuery1.sql
+EDI/iConnect/Empire Database Scripts/EmpireDbScripts/SQLQuery2.sql
+EDI/iConnect/Empire Database Scripts/EmpireDbScripts/SQLQuery3.sql
+Monitor/Monitor4/Custom Reports/invoice.ini
+Monitor/Monitor4/Custom Reports/invoiceregister.ini
+Monitor/Monitor4/Custom Reports/invoiceregister2.ini
+Monitor/Monitor4/invoice.ini
+Training/Invoicing.docx
+Training/SalesSummary.xlsx
