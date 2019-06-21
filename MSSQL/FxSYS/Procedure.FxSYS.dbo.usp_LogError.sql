@@ -1,17 +1,17 @@
 
 /*
-Create Procedure.MONITOR.FXSYS.usp_LogError.sql
+Create Procedure.FxSYS.dbo.usp_LogError.sql
 */
 
-use MONITOR
+use FxSYS
 go
 
-if	objectproperty(object_id('FXSYS.usp_LogError'), 'IsProcedure') = 1 begin
-	drop procedure FXSYS.usp_LogError
+if	objectproperty(object_id('dbo.usp_LogError'), 'IsProcedure') = 1 begin
+	drop procedure dbo.usp_LogError
 end
 go
 
-create procedure FXSYS.usp_LogError
+create procedure dbo.usp_LogError
 @ErrorLogID int = 0 output
 as
 begin
@@ -34,7 +34,7 @@ begin
 		end
 
 		insert
-			FXSYS.ErrorLog
+			dbo.ErrorLog
 		(	UserName
 		,	ErrorNumber
 		,	ErrorSeverity
@@ -58,7 +58,7 @@ begin
 	end try
 	begin catch
 		print 'An error occurred in stored procedure usp_LogError: '
-		execute FXSYS.usp_PrintError
+		execute dbo.usp_PrintError
 	end catch
 end
 --- </Return>
@@ -91,7 +91,7 @@ declare
 ,	@Error integer
 
 execute
-	@ProcReturn = FXSYS.usp_LogError
+	@ProcReturn = dbo.usp_LogError
 	@Param1 = @Param1
 ,	@TranDT = @TranDT out
 ,	@Result = @ProcResult out

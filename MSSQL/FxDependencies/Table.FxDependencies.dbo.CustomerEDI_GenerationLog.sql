@@ -1,44 +1,55 @@
 
 /*
-Create Table.MONITOR.FxSYS.USP_Calls.sql
+Create Table.FxDependencies.dbo.CustomerEDI_GenerationLog.sql
 */
 
-use MONITOR
+use FxDependencies
 go
 
---drop table FxSYS.USP_Calls
-if	objectproperty(object_id('FxSYS.USP_Calls'), 'IsTable') is null begin
+/*
+exec FT.sp_DropForeignKeys
 
-	create table FxSYS.USP_Calls
-	(	Status int not null default(0)
+drop table dbo.CustomerEDI_GenerationLog
+
+exec FT.sp_AddForeignKeys
+*/
+if	objectproperty(object_id('dbo.CustomerEDI_GenerationLog'), 'IsTable') is null begin
+
+	create table dbo.CustomerEDI_GenerationLog
+	(	FileStreamID uniqueidentifier not null
+	,	Status int not null default(0)
 	,	Type int not null default(0)
-	,	USP_Name sysname
-	,	BeginDT datetime
-	,	EndDT datetime
-	,	InArguments varchar(max)
-	,	OutArguments varchar(max)
+	,	ShipperID int null
+	,	FileGenerationDT datetime not null
+	,	FileSendDT datetime null
+	,	FileAcknowledgementDT datetime null
+	,	OriginalFileName sysname null
+	,	CurrentFilePath sysname null
 	,	RowID int identity(1,1) primary key clustered
 	,	RowCreateDT datetime default(getdate())
 	,	RowCreateUser sysname default(suser_name())
 	,	RowModifiedDT datetime default(getdate())
 	,	RowModifiedUser sysname default(suser_name())
+	,	unique nonclustered
+		(	FileStreamID
+		)
 	)
 end
 go
 
 /*
-Create trigger FxSYS.tr_USP_Calls_uRowModified on FxSYS.USP_Calls
+Create trigger dbo.tr_CustomerEDI_GenerationLog_uRowModified on dbo.CustomerEDI_GenerationLog
 */
 
---use MONITOR
+--use FxDependencies
 --go
 
-if	objectproperty(object_id('FxSYS.tr_USP_Calls_uRowModified'), 'IsTrigger') = 1 begin
-	drop trigger FxSYS.tr_USP_Calls_uRowModified
+if	objectproperty(object_id('dbo.tr_CustomerEDI_GenerationLog_uRowModified'), 'IsTrigger') = 1 begin
+	drop trigger dbo.tr_CustomerEDI_GenerationLog_uRowModified
 end
 go
 
-create trigger FxSYS.tr_USP_Calls_uRowModified on FxSYS.USP_Calls after update
+create trigger dbo.tr_CustomerEDI_GenerationLog_uRowModified on dbo.CustomerEDI_GenerationLog after update
 as
 declare
 	@TranDT datetime
@@ -59,7 +70,7 @@ declare
 	@Error integer,
 	@RowCount integer
 
-set	@ProcName = user_name(objectproperty(@@procid, 'OwnerId')) + '.' + object_name(@@procid)  -- e.g. FxSYS.usp_Test
+set	@ProcName = user_name(objectproperty(@@procid, 'OwnerId')) + '.' + object_name(@@procid)  -- e.g. dbo.usp_Test
 --- </Error Handling>
 
 begin try
@@ -79,16 +90,16 @@ begin try
 	--- <Body>
 	if	not update(RowModifiedDT) begin
 		--- <Update rows="*">
-		set	@TableName = 'FxSYS.USP_Calls'
+		set	@TableName = 'dbo.CustomerEDI_GenerationLog'
 		
 		update
-			uc
+			cegl
 		set	RowModifiedDT = getdate()
 		,	RowModifiedUser = suser_name()
 		from
-			FxSYS.USP_Calls uc
+			dbo.CustomerEDI_GenerationLog cegl
 			join inserted i
-				on i.RowID = uc.RowID
+				on i.RowID = cegl.RowID
 		
 		select
 			@Error = @@Error,
@@ -163,19 +174,19 @@ begin transaction Test
 go
 
 insert
-	FxSYS.USP_Calls
+	dbo.CustomerEDI_GenerationLog
 ...
 
 update
 	...
 from
-	FxSYS.USP_Calls
+	dbo.CustomerEDI_GenerationLog
 ...
 
 delete
 	...
 from
-	FxSYS.USP_Calls
+	dbo.CustomerEDI_GenerationLog
 ...
 go
 
@@ -195,18 +206,3 @@ Results {
 */
 go
 
-select
-	uc.Status
-,   uc.Type
-,   uc.USP_Name
-,   uc.BeginDT
-,   uc.EndDT
-,   uc.InArguments
-,   uc.OutArguments
-,   uc.RowID
-,   uc.RowCreateDT
-,   uc.RowCreateUser
-,   uc.RowModifiedDT
-,   uc.RowModifiedUser
-from
-	FXSYS.USP_Calls uc

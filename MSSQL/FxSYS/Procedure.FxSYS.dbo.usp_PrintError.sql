@@ -1,17 +1,17 @@
 
 /*
-Create Procedure.MONITOR.FXSYS.usp_PrintError.sql
+Create Procedure.FxSYS.dbo.usp_PrintError.sql
 */
 
-use MONITOR
+use FxSYS
 go
 
-if	objectproperty(object_id('FXSYS.usp_PrintError'), 'IsProcedure') = 1 begin
-	drop procedure FXSYS.usp_PrintError
+if	objectproperty(object_id('dbo.usp_PrintError'), 'IsProcedure') = 1 begin
+	drop procedure dbo.usp_PrintError
 end
 go
 
-create procedure FXSYS.usp_PrintError
+create procedure dbo.usp_PrintError
 as
 begin
 	set nocount on
@@ -56,7 +56,7 @@ declare
 ,	@Error integer
 
 execute
-	@ProcReturn = FXSYS.usp_PrintError
+	@ProcReturn = dbo.usp_PrintError
 	@Param1 = @Param1
 ,	@TranDT = @TranDT out
 ,	@Result = @ProcResult out

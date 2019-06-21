@@ -1,52 +1,75 @@
 
 /*
-Create Table.MONITOR.FXSYS.ErrorLog.sql
+Create Table.FxEDI.EDI.EDIDocuments.sql
 */
 
-use MONITOR
+use FxEDI
 go
 
 /*
 exec FT.sp_DropForeignKeys
 
-drop table FXSYS.ErrorLog
+drop table EDI.EDIDocuments
 
 exec FT.sp_AddForeignKeys
 */
-if	objectproperty(object_id('FXSYS.ErrorLog'), 'IsTable') is null begin
+if	objectproperty(object_id('EDI.EDIDocuments'), 'IsTable') is null begin
 
-	create table FXSYS.ErrorLog
-	(	Status int not null default(0)
-	,	Type int not null default(0)
-	,	UserName sysname null
-	,	ErrorNumber int null
-	,	ErrorSeverity int null
-	,	ErrorState int null
-	,	ErrorProcedure sysname null
-	,	ErrorLine int null
-	,	ErrorMessage varchar(max) null
-	,	RowID int identity(1,1) primary key clustered
-	,	RowCreateDT datetime default(getdate())
-	,	RowCreateUser sysname default(suser_name())
-	,	RowModifiedDT datetime default(getdate())
-	,	RowModifiedUser sysname default(suser_name())
+	create table EDI.EDIDocuments
+	(	GUID uniqueidentifier not null
+	,	Status int not null default (0)
+	,	FileName sysname not null
+	,	HeaderData xml null
+	,	Data xml null
+	,	TradingPartner varchar(50) null
+	,	Type varchar(6) null
+	,	Version varchar(20) null
+	,	EDIStandard varchar(50) null
+	,	Release varchar(50) null
+	,	DocNumber varchar(50) null
+	,	ControlNumber varchar(10) null
+	,	DeliverySchedule varchar(8) null
+	,	MessageNumber varchar(8) null
+	,	RowID int identity(1, 1) primary key clustered
+	,	RowTS timestamp not null
+	,	RowCreateDT datetime default (getdate())
+	,	RowCreateUser sysname default (suser_name())
+	,	RowModifiedDT datetime default (getdate())
+	,	RowModifiedUser sysname default (suser_name())
+	,	unique nonclustered
+		(	GUID
+		)
+	)
+
+	--alter table EDI.EDIDocuments drop column SourceType
+	--alter table EDI.EDIDocuments drop column MoparSSDDocument
+	--alter table EDI.EDIDocuments drop column VersionEDIFACTorX12
+
+	create nonclustered index ixRawEDIDocuments_1 on EDI.EDIDocuments
+	(	Status
+	,	EDIStandard
+	,	Type
+	)
+
+	create primary xml index PXML_EDIData on EDI.EDIDocuments
+	(	Data
 	)
 end
 go
 
 /*
-Create trigger FXSYS.tr_ErrorLog_uRowModified on FXSYS.ErrorLog
+Create trigger EDI.tr_EDIDocuments_uRowModified on EDI.EDIDocuments
 */
 
---use FxAztec
+--use FxEDI
 --go
 
-if	objectproperty(object_id('FXSYS.tr_ErrorLog_uRowModified'), 'IsTrigger') = 1 begin
-	drop trigger FXSYS.tr_ErrorLog_uRowModified
+if	objectproperty(object_id('EDI.tr_EDIDocuments_uRowModified'), 'IsTrigger') = 1 begin
+	drop trigger EDI.tr_EDIDocuments_uRowModified
 end
 go
 
-create trigger FXSYS.tr_ErrorLog_uRowModified on FXSYS.ErrorLog after update
+create trigger EDI.tr_EDIDocuments_uRowModified on EDI.EDIDocuments after update
 as
 declare
 	@TranDT datetime
@@ -67,7 +90,7 @@ declare
 	@Error integer,
 	@RowCount integer
 
-set	@ProcName = user_name(objectproperty(@@procid, 'OwnerId')) + '.' + object_name(@@procid)  -- e.g. FXSYS.usp_Test
+set	@ProcName = user_name(objectproperty(@@procid, 'OwnerId')) + '.' + object_name(@@procid)  -- e.g. EDI.usp_Test
 --- </Error Handling>
 
 begin try
@@ -87,16 +110,16 @@ begin try
 	--- <Body>
 	if	not update(RowModifiedDT) begin
 		--- <Update rows="*">
-		set	@TableName = 'FXSYS.ErrorLog'
+		set	@TableName = 'EDI.EDIDocuments'
 		
 		update
-			el
+			GUID
 		set	RowModifiedDT = getdate()
 		,	RowModifiedUser = suser_name()
 		from
-			FXSYS.ErrorLog el
+			EDI.EDIDocuments GUID
 			join inserted i
-				on i.RowID = el.RowID
+				on i.RowID = GUID.RowID
 		
 		select
 			@Error = @@Error,
@@ -171,19 +194,19 @@ begin transaction Test
 go
 
 insert
-	FXSYS.ErrorLog
+	EDI.EDIDocuments
 ...
 
 update
 	...
 from
-	FXSYS.ErrorLog
+	EDI.EDIDocuments
 ...
 
 delete
 	...
 from
-	FXSYS.ErrorLog
+	EDI.EDIDocuments
 ...
 go
 

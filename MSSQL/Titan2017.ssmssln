@@ -3,24 +3,60 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # SQL Server Management Studio Solution File, Format Version 14.00
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Monitor.ARS", "Monitor.ARS\Monitor.ARS.ssmssqlproj", "{25D38732-22A1-43AF-AECD-5C41BE6478D6}"
-EndProject
 Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "MONITOR.FXSYS", "MONITOR.FXSYS\MONITOR.FXSYS.ssmssqlproj", "{88666B17-5192-4FBC-BD8B-A3E37CB5FEAB}"
 EndProject
 Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "MONITOR.FT", "MONITOR.FT\MONITOR.FT.ssmssqlproj", "{A512EA6B-0E70-4857-A0A0-CF670647CC58}"
 EndProject
 Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "MONITOR.ShippingDock", "MONITOR.ShippingDock\MONITOR.ShippingDock.ssmssqlproj", "{7A9960EB-66A8-4806-A805-6F0CE6DD00E0}"
 EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "FxEDI", "FxEDI\FxEDI.ssmssqlproj", "{9FAE0939-B457-4D7E-AEB0-0B7C8356A4D0}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "MONITOR.ARS", "MONITOR.ARS\MONITOR.ARS.ssmssqlproj", "{5D9319AB-EAFD-4BE7-AFA2-CE225024433F}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "FxEDI.FTP", "FxEDI.FTP\FxEDI.FTP.ssmssqlproj", "{EDB78E34-D043-4B76-B7EE-0CB5537364C4}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "FxDependencies", "FxDependencies\FxDependencies.ssmssqlproj", "{6D32547B-6ABD-4078-8DBD-ECB74B36BE82}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "FxEDI.Fx", "FxEDI.Fx\FxEDI.Fx.ssmssqlproj", "{024A8B48-0BD0-497C-8C85-421461AA9A78}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "FxSYS", "FxSYS\FxSYS.ssmssqlproj", "{B8D70A76-E665-4D8F-94E3-8345D0326C6F}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "FxDependencies.EDI", "FxDependencies.EDI\FxDependencies.EDI.ssmssqlproj", "{AA75A437-A7F7-4F88-A9CE-2E2B42552D0B}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "FxDependencies.MONITOR", "FxDependencies.MONITOR\FxDependencies.MONITOR.ssmssqlproj", "{356E40FF-AD07-4F40-A12E-99D1A66ECF74}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "FxDependencies.FXSYS", "FxDependencies.FXSYS\FxDependencies.FXSYS.ssmssqlproj", "{75DA5620-CADA-4ACA-ADD1-5AF0FA831BFB}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "FxEDI.RAWEDIDATA_FS", "FxEDI.RAWEDIDATA_FS\FxEDI.RAWEDIDATA_FS.ssmssqlproj", "{A26BFDF9-A0D6-4E4C-ABFC-DDA3B41CBAB5}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "FxEDI.FXSYS", "FxEDI.FXSYS\FxEDI.FXSYS.ssmssqlproj", "{96C6E87C-9285-4C7F-B3AF-D47639E944F3}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "FxEDI.EDI", "FxEDI.EDI\FxEDI.EDI.ssmssqlproj", "{3BD01021-B869-475D-8EFE-8D2FB161A3A6}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "MONITOR.Dependencies", "MONITOR.Dependencies\MONITOR.Dependencies.ssmssqlproj", "{8F53CC16-515A-4FC8-A202-7DBD7E71E1D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Default|Default = Default|Default
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{25D38732-22A1-43AF-AECD-5C41BE6478D6}.Default|Default.ActiveCfg = Default
 		{88666B17-5192-4FBC-BD8B-A3E37CB5FEAB}.Default|Default.ActiveCfg = Default
 		{A512EA6B-0E70-4857-A0A0-CF670647CC58}.Default|Default.ActiveCfg = Default
-		{CCD9C1D4-E605-46DE-A676-20D62E55D1B2}.Default|Default.ActiveCfg = Default
 		{7A9960EB-66A8-4806-A805-6F0CE6DD00E0}.Default|Default.ActiveCfg = Default
+		{9FAE0939-B457-4D7E-AEB0-0B7C8356A4D0}.Default|Default.ActiveCfg = Default
+		{5D9319AB-EAFD-4BE7-AFA2-CE225024433F}.Default|Default.ActiveCfg = Default
+		{EDB78E34-D043-4B76-B7EE-0CB5537364C4}.Default|Default.ActiveCfg = Default
+		{6D32547B-6ABD-4078-8DBD-ECB74B36BE82}.Default|Default.ActiveCfg = Default
+		{024A8B48-0BD0-497C-8C85-421461AA9A78}.Default|Default.ActiveCfg = Default
+		{B8D70A76-E665-4D8F-94E3-8345D0326C6F}.Default|Default.ActiveCfg = Default
+		{AA75A437-A7F7-4F88-A9CE-2E2B42552D0B}.Default|Default.ActiveCfg = Default
+		{356E40FF-AD07-4F40-A12E-99D1A66ECF74}.Default|Default.ActiveCfg = Default
+		{75DA5620-CADA-4ACA-ADD1-5AF0FA831BFB}.Default|Default.ActiveCfg = Default
+		{A26BFDF9-A0D6-4E4C-ABFC-DDA3B41CBAB5}.Default|Default.ActiveCfg = Default
+		{96C6E87C-9285-4C7F-B3AF-D47639E944F3}.Default|Default.ActiveCfg = Default
+		{3BD01021-B869-475D-8EFE-8D2FB161A3A6}.Default|Default.ActiveCfg = Default
+		{0EA8B594-6EB6-4AF0-8FA6-E288A59FDB55}.Default|Default.ActiveCfg = Default
+		{8F53CC16-515A-4FC8-A202-7DBD7E71E1D5}.Default|Default.ActiveCfg = Default
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

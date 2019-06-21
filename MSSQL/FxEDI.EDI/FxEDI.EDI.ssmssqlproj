@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="FxEDI.EDI">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="Titan2017:sa">
+          <Created>2019-06-17T12:00:41.0345519-04:00</Created>
+          <Type>SQL</Type>
+          <Server>Titan2017</Server>
+          <UserName>sa</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB>FxEDI</InitialDB>
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="ScalarFunction.FxEDI.EDI.udf_EDIDocument_ControlNumber.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:Titan2017:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>Titan2017</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>ScalarFunction.FxEDI.EDI.udf_EDIDocument_ControlNumber.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ScalarFunction.FxEDI.EDI.udf_EDIDocument_DeliverySchedule.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:Titan2017:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>Titan2017</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>ScalarFunction.FxEDI.EDI.udf_EDIDocument_DeliverySchedule.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ScalarFunction.FxEDI.EDI.udf_EDIDocument_DocNumber.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:Titan2017:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>Titan2017</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>ScalarFunction.FxEDI.EDI.udf_EDIDocument_DocNumber.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ScalarFunction.FxEDI.EDI.udf_EDIDocument_MessageNumber.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:Titan2017:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>Titan2017</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>ScalarFunction.FxEDI.EDI.udf_EDIDocument_MessageNumber.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ScalarFunction.FxEDI.EDI.udf_EDIDocument_Release.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:Titan2017:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>Titan2017</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>ScalarFunction.FxEDI.EDI.udf_EDIDocument_Release.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ScalarFunction.FxEDI.EDI.udf_EDIDocument_TradingPartner.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:Titan2017:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>Titan2017</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>ScalarFunction.FxEDI.EDI.udf_EDIDocument_TradingPartner.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ScalarFunction.FxEDI.EDI.udf_EDIDocument_Type.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:Titan2017:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>Titan2017</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>ScalarFunction.FxEDI.EDI.udf_EDIDocument_Type.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ScalarFunction.FxEDI.EDI.udf_EDIDocument_Version.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:Titan2017:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>Titan2017</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>ScalarFunction.FxEDI.EDI.udf_EDIDocument_Version.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Schema.FxEDI.EDI.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:Titan2017:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>Titan2017</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Schema.FxEDI.EDI.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery1.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:Titan2017:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>Titan2017</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>SQLQuery1.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Table.FxEDI.EDI.EDIDocuments.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:Titan2017:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>Titan2017</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Table.FxEDI.EDI.EDIDocuments.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>

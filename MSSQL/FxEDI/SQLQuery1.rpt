@@ -1,0 +1,10 @@
+﻿Msg 1921, Level 16, State 3, Line 1704
+Invalid filegroup 'FxEDI_FILESTREAM' specified.
+The module 'usp_SendSupplierEDI' depends on the missing object 'RAWEDIDATA_FS.usp_FileMove'. The module will still be created; however, it cannot run successfully until the object exists.
+The module 'usp_SendSupplierEDI' depends on the missing object 'RAWEDIDATA_FS.usp_FileMove'. The module will still be created; however, it cannot run successfully until the object exists.
+The module 'usp_SendSupplierEDI' depends on the missing object 'RAWEDIDATA_FS.usp_FileMove'. The module will still be created; however, it cannot run successfully until the object exists.
+The module 'usp_SendSupplierEDI' depends on the missing object 'RAWEDIDATA_FS.usp_FileMove'. The module will still be created; however, it cannot run successfully until the object exists.
+The module 'usp_SendSupplierEDI_TestMailBox' depends on the missing object 'RAWEDIDATA_FS.usp_FileMove'. The module will still be created; however, it cannot run successfully until the object exists.
+The module 'usp_SendSupplierEDI_TestMailBox' depends on the missing object 'RAWEDIDATA_FS.usp_FileMove'. The module will still be created; however, it cannot run successfully until the object exists.
+The module 'usp_SendSupplierEDI_TestMailBox' depends on the missing object 'RAWEDIDATA_FS.usp_FileMove'. The module will still be created; however, it cannot run successfully until the object exists.
+The module 'usp_SendSupplierEDI_TestMailBox' depends on the missing object 'RAWEDIDATA_FS.usp_FileMove'. The module will still be created; however, it cannot run successfully until the object exists.

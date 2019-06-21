@@ -1,15 +1,27 @@
 <?xml version="1.0"?>
-<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="MONITOR.FXSYS">
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="FxEDI">
   <Items>
     <LogicalFolder Name="Connections" Type="2" Sorted="true">
       <Items>
+        <ConnectionNode Name="EES-P51S\SQL2012:FORE-THOUGHT\estimpson">
+          <Created>2019-06-11T11:49:00.3610267-04:00</Created>
+          <Type>SQL</Type>
+          <Server>EES-P51S\SQL2012</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
         <ConnectionNode Name="Titan2017:sa">
-          <Created>2019-05-28T10:06:11.9366086-04:00</Created>
+          <Created>2019-06-07T17:47:38.2615349-04:00</Created>
           <Type>SQL</Type>
           <Server>Titan2017</Server>
           <UserName>sa</UserName>
           <Authentication>SQL</Authentication>
-          <InitialDB>MONITOR</InitialDB>
+          <InitialDB />
           <LoginTimeout>30</LoginTimeout>
           <ExecutionTimeout>0</ExecutionTimeout>
           <ConnectionProtocol>NotSpecified</ConnectionProtocol>
@@ -19,41 +31,35 @@
     </LogicalFolder>
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
-        <FileNode Name="Schema.MONITOR.FXSYS.sql">
+        <FileNode Name="1. Create DB.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:Titan2017:False:sa</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>Titan2017</AssociatedConnSrvName>
           <AssociatedConnUserName>sa</AssociatedConnUserName>
-          <FullPath>Schema.MONITOR.FXSYS.sql</FullPath>
+          <FullPath>1. Create DB.sql</FullPath>
         </FileNode>
-        <FileNode Name="Synonym.MONITOR.FXSYS.ErrorLog.sql">
+        <FileNode Name="2. Create Jobs.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:Titan2017:False:sa</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>Titan2017</AssociatedConnSrvName>
           <AssociatedConnUserName>sa</AssociatedConnUserName>
-          <FullPath>Synonym.MONITOR.FXSYS.ErrorLog.sql</FullPath>
+          <FullPath>2. Create Jobs.sql</FullPath>
         </FileNode>
-        <FileNode Name="Synonym.MONITOR.FXSYS.USP_Calls.sql">
+        <FileNode Name="3. Receive Customer EDI.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:Titan2017:False:sa</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>Titan2017</AssociatedConnSrvName>
           <AssociatedConnUserName>sa</AssociatedConnUserName>
-          <FullPath>Synonym.MONITOR.FXSYS.USP_Calls.sql</FullPath>
+          <FullPath>3. Receive Customer EDI.sql</FullPath>
         </FileNode>
-        <FileNode Name="Synonym.MONITOR.FXSYS.usp_EmailError.sql">
+        <FileNode Name="4. Send Customer EDI.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:Titan2017:False:sa</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>Titan2017</AssociatedConnSrvName>
           <AssociatedConnUserName>sa</AssociatedConnUserName>
-          <FullPath>Synonym.MONITOR.FXSYS.usp_EmailError.sql</FullPath>
+          <FullPath>4. Send Customer EDI.sql</FullPath>
         </FileNode>
-        <FileNode Name="Synonym.MONITOR.FXSYS.usp_LogError.sql">
+        <FileNode Name="SQLQuery3.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:Titan2017:False:sa</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>Titan2017</AssociatedConnSrvName>
           <AssociatedConnUserName>sa</AssociatedConnUserName>
-          <FullPath>Synonym.MONITOR.FXSYS.usp_LogError.sql</FullPath>
-        </FileNode>
-        <FileNode Name="Synonym.MONITOR.FXSYS.usp_PrintError.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:Titan2017:False:sa</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>Titan2017</AssociatedConnSrvName>
-          <AssociatedConnUserName>sa</AssociatedConnUserName>
-          <FullPath>Synonym.MONITOR.FXSYS.usp_PrintError.sql</FullPath>
+          <FullPath>SQLQuery3.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>

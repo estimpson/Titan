@@ -1,17 +1,17 @@
 
 /*
-Create Procedure.MONITOR.FXSYS.usp_EmailError.sql
+Create Procedure.FxSYS.dbo.usp_EmailError.sql
 */
 
-use MONITOR
+use FxSYS
 go
 
-if	objectproperty(object_id('FXSYS.usp_EmailError'), 'IsProcedure') = 1 begin
-	drop procedure FXSYS.usp_EmailError
+if	objectproperty(object_id('dbo.usp_EmailError'), 'IsProcedure') = 1 begin
+	drop procedure dbo.usp_EmailError
 end
 go
 
-create procedure FXSYS.usp_EmailError
+create procedure dbo.usp_EmailError
 	@Recipients varchar(max) = ''
 ,	@CopyRecipients varchar(max)= 'estimpson@fore-thought.com'
 as
@@ -32,7 +32,7 @@ begin
 
 	declare @html1 nvarchar(max);
 	
-	execute FT.usp_TableToHTML
+	execute dbo.usp_TableToHTML
 			@tableName = @emailTableName
 		,	@html = @html out
 		,	@orderBy = N'[Error]'
@@ -79,7 +79,7 @@ declare
 ,	@Error integer
 
 execute
-	@ProcReturn = FXSYS.usp_EmailError
+	@ProcReturn = dbo.usp_EmailError
 
 set	@Error = @@error
 
