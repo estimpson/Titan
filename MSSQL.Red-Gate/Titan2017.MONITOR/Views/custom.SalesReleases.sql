@@ -21,7 +21,7 @@ from
 		on oh.order_no = od.order_no
 	cross join custom.Monday m
 where
-	od.due_date > m.ThisMonday
+	od.due_date > m.ThisMonday - 7 * 12
 	and od.due_date <= m.ThisMonday + 7 * 21
 group by
 	oh.customer
