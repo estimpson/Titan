@@ -7,14 +7,14 @@ GO
 
 
 
-CREATE  PROCEDURE [dbo].[ftsp_EDI_ASN_Invoice_Modatec] @Shipper INT   AS
+CREATE  PROCEDURE [dbo].[ftsp_EDI_ASN_Invoice_Modatec_backup20190704] @Shipper INT   AS
 BEGIN
 
---exec ftsp_EDI_ASN_Invoice_Modatec 90670
+--exec ftsp_EDI_ASN_Invoice_Modatec 82195
 
 /*
 
-MG1_856_D_v3060_MODATEKSOI^_190704
+MG1_856_D_v4010_MAGNA^SI_130515
 
 
 */
@@ -36,42 +36,44 @@ DECLARE
 	@ArrivalDateYYMMDD CHAR(6),
 	@ArrivalTimeHHMM CHAR(4),
 	@Mea01 CHAR(2),
-	@Mea02G CHAR(1),
-	@Mea02N CHAR(1),
-	@GrossWeightLbs CHAR(22),
+	@Mea02G CHAR(3),
+	@Mea02N CHAR(3),
+	@GrossWeightLbs CHAR(12),
 	@WeightUM CHAR(2),
-	@NetWeightLbs CHAR(22),
+	@NetWeightLbs CHAR(12),
 	@PackagingCode CHAR(5),
 	@PackCountHeader CHAR(8),
-	@SCAC CHAR(20),
+	@RoutingSequnceCodeTD501 CHAR(2),
+	@IDCodeQualifierTD502 CHAR(2),
+	@SCAC CHAR(17),
 	@TransMode CHAR(2),
 	@PPCode CHAR(7),
 	@EquipDesc CHAR(2),
 	@EquipInit CHAR(4),
 	@TrailerNumber CHAR(10),
-	@REFBMQual CHAR(2),
-	@REFPKQual CHAR(2),
-	@REFCNQual CHAR(2),
+	@REFBMQual CHAR(3),
+	@REFPKQual CHAR(3),
+	@REFCNQual CHAR(3),
 	@REFSTQual CHAR(2),
 	@REFSUQual CHAR(2),
 	@REF92Qual CHAR(2),
 	@REF01Qual CHAR(2),
 	@REFBMValue CHAR(20),
 	@REFPKValue CHAR(20),
-	@REFCNValue CHAR(29),
+	@REFCNValue CHAR(20),
 	@FOB CHAR(2),
 	@ProNumber CHAR(16),
 	@SealNumber CHAR(8),
-	@N1QualifierST CHAR(2),
-	@N1QualifierMI CHAR(2),
-	@N1QualifierSU CHAR(2),
-	@N1Type CHAR(2),
-	@SupplierName CHAR(35),
-	@SupplierCode CHAR(20),
-	@ShipToName CHAR(35),
-	@ShipToID CHAR(20),
-	@MaterialIssuerName CHAR(35),
-	@MaterialIssuerCode CHAR(20),
+	@N1QualifierST CHAR(3),
+	@N1QualifierMI CHAR(3),
+	@N1QualifierSU CHAR(3),
+	@N1Type CHAR(3),
+	@SupplierName CHAR(60),
+	@SupplierCode CHAR(70),
+	@ShipToName CHAR(60),
+	@ShipToID CHAR(70),
+	@MaterialIssuerName CHAR(60),
+	@MaterialIssuerCode CHAR(70),
 	@TimeZone CHAR(2),
 	@AETCResponsibility CHAR(1),
 	@AETC CHAR(8),
@@ -82,7 +84,7 @@ DECLARE
 	@ShippedDateQualifier CHAR(3),
 	@ArrivalDateQualifier CHAR(3)
 	
-SELECT	@TradingPartner = COALESCE(NULLIF(trading_partner_code,''), 'Formet Testing'),
+SELECT			@TradingPartner = COALESCE(NULLIF(trading_partner_code,''), 'MODATEK'),
 				@PartialComplete = '',
 				@PurposeCode = '00' ,
 				@ShipperID= s.id,
@@ -109,14 +111,14 @@ SELECT	@TradingPartner = COALESCE(NULLIF(trading_partner_code,''), 'Formet Testi
 				@REFPKQual = 'PK',
 				@REFBMQual = 'BM',
 				@REFSTQual = 'ST',
-				@REF92Qual = '01',
+				@REF92Qual = '92',
 				@ShipToID =  COALESCE(parent_destination, s.destination) ,
 				@REFSUQual = 'SU',
 				@REF01Qual = '01',
 				@N1QualifierMI = 'MI',
 				@N1QualifierST = 'ST',
 				@N1QualifierSU = 'SU',
-				@N1Type = '01',
+				@N1Type = '92',
 				@SupplierCode = COALESCE(es.supplier_code,'5199661234'),
 				@SupplierName = 'Titan Tool & Die Limited',
 				@MaterialIssuerCode = COALESCE(es.material_issuer,'253990576P'),
@@ -127,7 +129,9 @@ SELECT	@TradingPartner = COALESCE(NULLIF(trading_partner_code,''), 'Formet Testi
 				@PackCountHeader = s.staged_objs,
 				@REFBMValue = COALESCE(s.bill_of_lading_number, s.id),
 				@RefPKValue = s.id,
-				@EquipDesc = 'TL'
+				@EquipDesc = 'TL',
+				@RoutingSequnceCodeTD501 = 'B',
+				@IDCodeQualifierTD502 = '2'
 FROM
 		Shipper s
 	JOIN
@@ -148,7 +152,7 @@ CREATE	TABLE	#ASNResultSet (
 INSERT	#ASNResultSet (LineData)
 	SELECT	('//STX12//856'+  @TradingPartner + @ShipperID+ @PartialComplete )
 INSERT	#ASNResultSet (LineData)
-	SELECT	('01'+  @PurposeCode + @ShipperID + @ASNDateYYMMDD + @ASNTimeHHMM  )
+	SELECT	('01'+   @ShipperID + @ASNDateYYMMDD + @ASNTimeHHMM  )
 INSERT	#ASNResultSet (LineData)
 	SELECT	('02'+  @ShippedDateYYMMDD + @ShippedTimeHHMM + @TimeCode + @Century )
 INSERT	#ASNResultSet (LineData)
@@ -158,51 +162,52 @@ INSERT	#ASNResultSet (LineData)
 INSERT	#ASNResultSet (LineData)
 	SELECT	('04'+   @PackagingCode +  @PackCountHeader  )
 INSERT	#ASNResultSet (LineData)
-	SELECT	('05'+ @SCAC + @TransMode    )
+	SELECT	('05'+ @RoutingSequnceCodeTD501 + @IDCodeQualifierTD502 + @SCAC + @TransMode    )
 INSERT	#ASNResultSet (LineData)
-	SELECT	('06' + @EquipDesc + SPACE(4) + @TrailerNumber )
+	SELECT	('06' + @EquipDesc + @TrailerNumber )
 INSERT	#ASNResultSet (LineData)
-	SELECT	('10' + @REFBMQual + @REFBMValue)
+	SELECT	('07' + @REFBMQual + @REFBMValue)
 INSERT	#ASNResultSet (LineData)
-	SELECT	('10' + @REFPKQual + @REFPKValue)
+	SELECT	('07' + @REFPKQual + @REFPKValue)
 INSERT	#ASNResultSet (LineData)
-	SELECT	('11' + @N1QualifierMI + @N1Type + @MaterialIssuerCode + @MaterialIssuerName )
+	SELECT	('08' + @N1QualifierMI +  @MaterialIssuerCode  )
 INSERT	#ASNResultSet (LineData)
-	SELECT	('11' + @N1QualifierSU + @N1Type + @SupplierCode + @SupplierName )
+	SELECT	('09' +  @MaterialIssuerName  )
 INSERT	#ASNResultSet (LineData)
-	SELECT	('11' + @N1QualifierST + @N1Type + @ShipToID + @ShipToName )
+	SELECT	('08' + @N1QualifierSU +  @SupplierCode  )
+INSERT	#ASNResultSet (LineData)
+	SELECT	('09' +  @SupplierName  )
+INSERT	#ASNResultSet (LineData)
+	SELECT	('08' + @N1QualifierST +  @ShipToID  )
+INSERT	#ASNResultSet (LineData)
+	SELECT	('09' + @ShipToName )
+
 
 
 
 --Declare Variables for Detail of ASN
 DECLARE	
-				@SerialInt INT,
-				@ParentSerial INT, 
+				@SerialInt INT, 
 				@Part VARCHAR(25),
 				@LINBP CHAR(2),
-				@CustomerPart CHAR(40),
+				@CustomerPart CHAR(48),
 				@PartQty  CHAR(12),
 				@PartAccumQty  CHAR(11),
 				@PartUM CHAR(2),
-				@CustomerPO CHAR(22),
+				@CustomerPO CHAR(10),
 				@CustomerPOLine CHAR(10),
 				@PackCount CHAR(6),
 				@PackQty CHAR(12),
 				@PackType CHAR(5),
 				@PackUM CHAR(2),
 				@RFFType CHAR(3),
-				@RFFType2 CHAR(2),
-				@SerialNumber CHAR(30),
-				@ParentSerialNumber CHAR(30),
-				@PackTypeVarchar VARCHAR(25),
-				@PackQtyInt INT
+				@SerialNumber CHAR(20)
 
-SELECT	@LINBP = 'BP', @RFFType = 'LS', @RFFType2 = 'LS'
+SELECT	@LINBP = 'BP', @RFFType = 'LS'
 			
 DECLARE	
 				@SerialASN TABLE (
 					Serial INT,
-					ParentSerial INT,
 					part VARCHAR(25),
 					PackType VARCHAR(25),
 					PackQty INT
@@ -212,7 +217,6 @@ INSERT
 	@SerialASN
 SELECT
 	serial,
-	COALESCE(parent_serial,0),
 	part,
 	COALESCE('CNT90',package_type, 'CNT90') ,
 	quantity
@@ -221,22 +225,16 @@ FROM
 WHERE
 	type = 'S' AND
 	shipper = CONVERT(VARCHAR(10), @shipper) AND
-	part!='PALLET'
+	show_on_shipper IS NOT NULL
 ORDER BY
 	part,
-	package_type,
-	quantity,
-	parent_serial,
 	serial
-
-
-
 	
 	
 DECLARE part CURSOR LOCAL 
 FOR
 SELECT
-	DISTINCT Part,PackType,PackQty,ParentSerial 
+	DISTINCT part 
 FROM
 	@SerialASN
 	
@@ -248,7 +246,7 @@ WHILE
 	FETCH
 		part
 	INTO
-		@part, @PackTypeVarchar, @PackQtyInt, @ParentSerial
+		@part
 		
 	IF	@@FETCH_STATUS != 0 BEGIN
 		BREAK
@@ -256,41 +254,30 @@ WHILE
 	
 	SELECT
 		@CustomerPart = sd.customer_part,
-		@PartQty = CONVERT(INT,SUM(SerialASN.PackQty)),
-		@PartAccumQty = CONVERT(INT, MAX(sd.accum_shipped)),
+		@PartQty = CONVERT(INT,sd.qty_packed),
+		@PartAccumQty = CONVERT(INT, sd.accum_shipped),
 		@PartUm = 'EA',
-		@CustomerPO = MAX(sd.customer_po),
-		@ParentSerialNumber = ParentSerial
+		@CustomerPO = sd.customer_po
 	FROM
-		@SerialASN SerialASN
-	JOIN
-		dbo.shipper_detail sd ON sd.part = SerialASN.part
+		dbo.shipper_detail sd
 	WHERE
-		sd.part_original = @part AND
-		sd.shipper = @shipper AND
-		SerialASN.PackType = @PackTypeVarchar AND
-		SerialASN.PackQty = @PackQtyInt AND
-		SerialASN.ParentSerial = @ParentSerial
-	GROUP BY
-		sd.customer_part,
-		SerialASN.ParentSerial
+		part_original = @part AND
+		shipper = @shipper
 		
 		INSERT
 			#ASNResultSet	( LineData )
 		SELECT
-			'12' + @LINBP + @CustomerPart + @PartQty + @PartUM  + @PartAccumQty
+			'10' + @LINBP + @CustomerPart 
+
+		INSERT
+			#ASNResultSet	( LineData )
+		SELECT
+			'11'+ SPACE(48) +   @PartQty + @PartUM  + @PartAccumQty
 		
 		INSERT
 			#ASNResultSet	( LineData )
 		SELECT
-			'13' + @CustomerPO
-		IF @ParentSerial>0
-		Begin
-		INSERT
-			#ASNResultSet	( LineData )
-		SELECT
-			'16' + @RFFType2 + @ParentSerialNumber
-		end
+			'12' + @CustomerPO
 			
 			DECLARE partpack CURSOR LOCAL 
 				FOR
@@ -302,10 +289,7 @@ WHILE
 			FROM
 				@SerialASN
 			WHERE
-				part = @part AND
-				PackType = @PackTypeVarchar AND
-				PackQty =  @PackQtyInt AND
-				ParentSerial = @ParentSerial
+				part = @part
 			GROUP BY
 				part,
 				PackType,
@@ -329,15 +313,11 @@ WHILE
 				BREAK
 				END
 
-				--INSERT
-				--#ASNResultSet	( LineData )
-				--SELECT
-				--'15' + SPACE(4) + @PackCount 
-								
+											
 				INSERT
 				#ASNResultSet	( LineData )
 				SELECT
-				'17' + @PackCount + @PackQty +  @PackType 
+				'13' + @PackCount + @PackQty +  @PackType 
 								
 	
 					DECLARE SerialNumber CURSOR LOCAL
@@ -347,9 +327,8 @@ WHILE
 					FROM
 						@SerialASN
 					WHERE	part = @Part AND
-							PackType = CONVERT(VARCHAR(25), @PackTypeVarchar) AND
-							PackQty = CONVERT( INT, @PackQtyInt) AND
-							ParentSerial = @ParentSerial
+							PackType = CONVERT(VARCHAR(25), RTRIM(@PackType)) AND
+							PackQty = CONVERT( INT, @PackQty)
 					ORDER BY
 							serial
 					OPEN
@@ -374,7 +353,7 @@ WHILE
 					INSERT
 					#ASNResultSet	( LineData )
 					SELECT
-					'18' + @RFFType + @SerialNumber
+					'14' + @SerialNumber
 		
 					END
 					CLOSE
@@ -394,8 +373,6 @@ WHILE
 		Part
 		DEALLOCATE
 		Part
-	
-
 
 
 /* --Invoice flat file definition for Modatek
