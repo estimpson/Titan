@@ -284,37 +284,79 @@ from	part_online
 	join shipper_detail on shipper_detail.shipper = @shipper and
 		shipper_detail.part_original = part_online.part
 
+--	(pre8).  Capture release numbers being shipped for Benteler
+if	exists
+		(	select
+				*
+			from
+				dbo.shipper s
+			where
+				s.id = @shipper
+				and s.customer = 'BENT'
+		) begin
+
+	insert
+		dbo.DiscretePONumbersShipped
+	(	OrderNo
+	,	ShipDate
+	,	Qty
+	,	DiscretePONumber
+	,	Shipper
+	)
+	select
+		dpns.OrderNo
+	,	dpns.ShipDate
+	,	Qty = sum (POQty)
+	,	dpns.DiscretePONumber
+	,	dpns.Shipper
+	from
+		(	select
+				sd.Shipper
+			,	sd.ShipDate
+			,	sd.QtyPacked
+			,	od.OrderNo
+			,	POQty = case when od.PostAccum < sd.QtyPacked then od.ReleaseQty else sd.QtyPacked - (od.PostAccum - od.ReleaseQty) end
+			,	od.DiscretePONumber
+			,	od.PostAccum
+			,	od.ReleaseQty
+			from
+				(	select
+						Shipper = sd.shipper
+					,	ShipDate = sd.date_shipped
+					,	QtyPacked = sd.qty_packed
+					,	OrderNo = sd.order_no
+					from
+						dbo.shipper_detail sd
+				) sd
+				cross apply
+				(	select
+						OrderNo = od.order_no
+					,	ReleaseQty = od.std_qty
+					,	DiscretePONumber = od.release_no
+					,	PostAccum = sum(od.std_qty) over (order by od.due_date, od.release_no, od.our_cum)
+					from
+						dbo.order_detail od
+					where
+						od.order_no = sd.OrderNo
+				) od
+			where
+				sd.shipper = @shipper
+				and od.PostAccum - od.ReleaseQty < sd.QtyPacked
+		) dpns
+	group by
+		dpns.Shipper
+	,	dpns.ShipDate
+	,	dpns.QtyPacked
+	,	dpns.OrderNo
+	,	dpns.DiscretePONumber
+end
+
 --	8.	Relieve order requirements.
-/*execute @returnvalue = msp_update_orders @shipper
+
+execute @returnvalue = msp_update_orders @shipper
 
 if @returnvalue < 0
-	return @returnvalue*/
-IF	EXISTS
-		(SELECT
-			1
-		FROM
-			dbo.shipper s
-			JOIN customer c ON c.customer = s.customer
-		WHERE
-			s.id = @shipper
-			AND ( c.customer = 'BENT') 
-			AND 1=1 ) --Make false to only call msp_update_orders 
-
-	BEGIN
-	
-	EXECUTE @returnvalue = usp_update_orders @shipper
-
-	IF @returnvalue < 0
-		RETURN @returnvalue
-	
-	END
-ELSE BEGIN
-	EXECUTE @returnvalue = msp_update_orders @shipper
-
-	IF @returnvalue < 0
-		RETURN @returnvalue
-END
-
+	return @returnvalue
 
 --	9.	Close bill of lading.
 select	@bol = bill_of_lading_number
@@ -362,9 +404,4 @@ commit transaction -- (1T)
 
 select 0
 return 0
-
-
-
-
-
 GO
